@@ -11,8 +11,10 @@ public class PalindromeNumber {
         long xx = x;
         
         if(xx<0){
-           xx = xx*(-1);
-           positive = false;
+        	
+           return false; // based on the leetcode discussion !	
+           //xx = xx*(-1);
+           //positive = false;
         }
         
         
@@ -50,6 +52,6 @@ public class PalindromeNumber {
     	
     	boolean myResult = new PalindromeNumber().isPalindrome(-2147483648);
     	System.out.println(myResult);
-    	
+    	System.out.println("a\rb");
     }
 }

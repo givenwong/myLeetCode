@@ -15,4 +15,10 @@ public class IntegertoRoman {
     }
     return res.toString();
 }
+   
+   public static void main(String[] args){
+	   
+	   IntegertoRoman myRoman = new IntegertoRoman();
+	   System.out.println(myRoman.intToRoman(1100));
+   }
 }

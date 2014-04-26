@@ -59,13 +59,5 @@ public class ZigZagConversion {
     }
     
     
-    public static void main(String[] args){
-    	
-    	Solution mySolution = new Solution();
-    	
-    	String result = mySolution.convert("ABC", 2);
-    	System.out.println(result);
-    	
-    	
-    }
+
 }

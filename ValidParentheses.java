@@ -26,11 +26,5 @@ public class ValidParentheses {
         
     }
     
-    public static void main(String[] args){
-    	
-    	Solution mySolution = new Solution();
-    	boolean myResult = mySolution.isValid("((");
-    	
-    	System.out.println(myResult);
-    }
+
 }

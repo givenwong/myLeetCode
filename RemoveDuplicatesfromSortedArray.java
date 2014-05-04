@@ -34,12 +34,5 @@ public class RemoveDuplicatesfromSortedArray {
         
     }
     
-    public static void main(String[] args){
-    	
-    	Solution mySolution = new Solution();
-    	int[] myIntArray = {1,2};
-    	int myResult = mySolution.removeDuplicates(myIntArray);
-    	System.out.println(myResult);
-    	
-    }
+
 }

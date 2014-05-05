@@ -39,9 +39,9 @@ public class CountandSay {
     }
     public static void main(String[] args){
     	
-    	Solution mySolution = new Solution();
+    	CountandSay myCountandSay = new CountandSay();
     	
-    	String myString = mySolution.countAndSay(60);
+    	String myString = myCountandSay.countAndSay(60);
     	System.out.println(myString);
     }
 }

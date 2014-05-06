@@ -71,7 +71,7 @@ public class SudokuSolver {
     
     public static void main(String[] args){
     	
-    	Solution mySolution = new Solution();
+    	SudokuSolver mySolution = new SudokuSolver();
     	
     	char[][] myBoard ={".....7..9".toCharArray(),".4..812..".toCharArray(),"...9...1.".toCharArray(),"..53...72".toCharArray(),"293....5.".toCharArray(),".....53..".toCharArray(),"8...23...".toCharArray(),"7...5..4.".toCharArray(),"531.7....".toCharArray()};
     	mySolution.solveSudoku(myBoard);

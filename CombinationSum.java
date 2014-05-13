@@ -4,7 +4,7 @@ import java.util.*;
 public class CombinationSum {
     public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
         
-        Arrays.sort(candidates);
+ Arrays.sort(candidates);
  ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
  ArrayList<Integer> temp = new ArrayList<Integer>();
  dfs(candidates, target, 0,result ,temp);

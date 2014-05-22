@@ -7,6 +7,9 @@
  *     Interval(int s, int e) { start = s; end = e; }
  * }
  */
+
+
+import java.util.*;
 public class InsertInterval {
     
           public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {

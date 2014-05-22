@@ -54,11 +54,5 @@ public class AddBinary  {
            return bitResult;
     }
     
-    public static void main(String[] args){
-    	Solution mySolution = new Solution();
-    	String myResult = mySolution.addBinary("0", "0");
-    	System.out.println(myResult);
-    	
-    }
-    
+  
 }

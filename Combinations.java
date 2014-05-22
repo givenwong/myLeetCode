@@ -29,9 +29,5 @@ public class Combinations  {
         
     }
     
-    public static void main(String[] args){
-    	Solution mySolution = new Solution();
-    	ArrayList<ArrayList<Integer>> myResult = mySolution.combine(3, 2);
-    	System.out.println(myResult);
-    }
+
 }

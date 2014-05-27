@@ -1,12 +1,6 @@
+
 import java.util.*;
-
-class TreeLinkNode {
-      int val;
-      TreeLinkNode left, right, next;
-      TreeLinkNode(int x) { val = x; }
-  }
-
-public class PopulatingNextRightPointersinEachNode {
+public class PopulatingNextRightPointersinEachNodeII {
     public void connect(TreeLinkNode root) {
         
         ArrayList<ArrayList<TreeLinkNode>> result = new ArrayList<ArrayList<TreeLinkNode>>();

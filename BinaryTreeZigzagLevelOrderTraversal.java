@@ -84,7 +84,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
     
  public static void main(String[] args){
     	
-    	Solution  mySolution = new Solution();
+	 BinaryTreeZigzagLevelOrderTraversal mySolution = new BinaryTreeZigzagLevelOrderTraversal();
     	
     	TreeNode one = new TreeNode(1);
     	TreeNode two = new TreeNode(2);

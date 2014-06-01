@@ -39,16 +39,6 @@ public class FlattenBinaryTreetoLinkedList {
         return root;
     }
     
-    public static void main(String[] args){
-    	Solution mySolution = new Solution();
-        TreeNode one = new TreeNode(1);
-        TreeNode two = new TreeNode(2);
-        TreeNode three = new TreeNode(3);
-        one.left = null;
-        one.right = three;
-        
-        mySolution.flatten(one);
-        System.out.println("Hello");
-    }
+
        
 }

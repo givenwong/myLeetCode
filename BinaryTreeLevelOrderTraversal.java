@@ -13,7 +13,7 @@ public class BinaryTreeLevelOrderTraversal  {
         ArrayList<Integer> first = new ArrayList<Integer>();
         first.add(root.val);
         result.add(first);
-        
+        // there is 1 or 2 level of nodes in the queue; can't be more than 2
         int thisLevel = 1;
         int nextLevel = 0;
         
@@ -27,7 +27,7 @@ public class BinaryTreeLevelOrderTraversal  {
             if(top.right != null)
             myQueue.add(top.right);
             
-            if(thisLevel ==1){
+            if(thisLevel ==1){ // this level is finished and the next level becomes this level, add it to result
              if(top.left != null && top.right != null)    
              thisLevel = nextLevel+2;
              if((top.left != null && top.right == null)||(top.left == null && top.right != null) )    
@@ -40,11 +40,11 @@ public class BinaryTreeLevelOrderTraversal  {
              for(TreeNode a: myQueue){
              temp.add(a.val);
             }
-             if(temp.size() >0)
+            if(temp.size() >0)
             result.add(temp);
-                
+          
             }else{
-                thisLevel--;
+                thisLevel--; // this level not finished
              
              if(top.left != null && top.right != null)    
              nextLevel = nextLevel+2;
@@ -56,25 +56,6 @@ public class BinaryTreeLevelOrderTraversal  {
         }
         
      return result;
-        
-    }
-    
-    public static void main(String[] args){
-    	
-    	BinaryTreeLevelOrderTraversal  mySolution = new BinaryTreeLevelOrderTraversal ();
-    	
-    	TreeNode one = new TreeNode(1);
-    	TreeNode two = new TreeNode(2);
-    	TreeNode three = new TreeNode(3);
-    	TreeNode four = new TreeNode(4);
-    	TreeNode five = new TreeNode(5);
-    	one.left=two;
-    	one.right=three;
-    	two.left = four;
-    	three.right= five;
-    	
-    	ArrayList<ArrayList<Integer>> myResult = mySolution.levelOrder(one);
-    	System.out.println(myResult);
         
     }
 }

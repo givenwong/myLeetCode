@@ -4,7 +4,7 @@ class UndirectedGraphNode {
       int label;
       List<UndirectedGraphNode> neighbors;
       UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
-  };
+  }
  
 public class CloneGraph {
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
@@ -13,6 +13,7 @@ public class CloneGraph {
         return null;
         
          ArrayList<UndirectedGraphNode> queue = new ArrayList<UndirectedGraphNode>();
+         // map is to connect the old and new graph
          HashMap<UndirectedGraphNode,UndirectedGraphNode> map = new  HashMap<UndirectedGraphNode,UndirectedGraphNode>();
          
          queue.add(node);
@@ -25,7 +26,8 @@ public class CloneGraph {
              ArrayList<UndirectedGraphNode> neighbors = (ArrayList)current.neighbors;
              
              for(UndirectedGraphNode a: neighbors){
-                 if(!map.containsKey(a)){
+                 // the if else judgment is to avoid duplicates
+            	 if(!map.containsKey(a)){
                      queue.add(a);
                      UndirectedGraphNode temp = new UndirectedGraphNode(a.label);
                      map.put(a,temp);
@@ -35,11 +37,7 @@ public class CloneGraph {
                      map.get(current).neighbors.add(map.get(a));
                  }
              }
-             
-             
          }
-         
          return copy;
-    
     }
 }

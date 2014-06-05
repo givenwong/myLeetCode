@@ -1,12 +1,5 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
+// balanced: any subtree's left and right's depth difference <=1
+
 public class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
         
@@ -16,8 +9,7 @@ public class BalancedBinaryTree {
         if(isBalanced(root.left) && isBalanced(root.right) && (int)Math.abs(treeDepth(root.left) -treeDepth(root.right)) <=1)
         return true;
         
-        return false;
-        
+        return false;       
     }
     
     public int treeDepth(TreeNode root){

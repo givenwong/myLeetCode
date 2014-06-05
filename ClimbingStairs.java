@@ -3,7 +3,7 @@ public class ClimbingStairs  {
      
      if(n<=0)
      return 0;
-     
+     // n is the distance so there are n+1 level
      if(n ==1)
      return 1;
      
@@ -12,7 +12,7 @@ public class ClimbingStairs  {
      
     int[] dp = new int[n+1];
     
-    
+    // dp[0] is not used
     dp[1] =1;
     dp[2] = 2;
     

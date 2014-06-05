@@ -1,20 +1,9 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
 import java.util.*;
 public class BinaryTreeLevelOrderTraversalII  {
-    
     public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
-        
-        
+       
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        // result is from top to bottom; resultresult is from bottom to top
         ArrayList<ArrayList<Integer>> resultresult = new ArrayList<ArrayList<Integer>>();
         ArrayList<TreeNode> myQueue = new ArrayList<TreeNode>();
         

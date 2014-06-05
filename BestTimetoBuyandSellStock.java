@@ -5,8 +5,6 @@ public class BestTimetoBuyandSellStock {
         return 0;
         
         int[] diff = new int[prices.length-1];
-        
-        
         for(int i =0; i < prices.length-1; i++)
             diff[i] = prices[i+1] - prices[i];
         
@@ -23,7 +21,6 @@ public class BestTimetoBuyandSellStock {
             
             scanner++;
         }
-        
         return (max>0)?max:0;
     }
 }

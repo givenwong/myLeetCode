@@ -4,8 +4,6 @@ public class AddBinary  {
         if(a == null || b == null)
         System.exit(1);
         
-       
-    
         StringBuffer aBuffer = new StringBuffer(a).reverse();
         StringBuffer bBuffer = new StringBuffer(b).reverse();
         
@@ -17,8 +15,8 @@ public class AddBinary  {
                 bBuffer.append('0');
         }
         
-        bBuffer.append('0');
-        aBuffer.append('0');
+        bBuffer.append('0');	// in case there is a carry generated from the most significant bit (MSB)
+        aBuffer.append('0');    // the result would have one more bit than the longer number
         
         aBuffer = aBuffer.reverse();
         bBuffer = bBuffer.reverse();
@@ -48,7 +46,7 @@ public class AddBinary  {
            int bb = b -'0';
            int carrycarry = carry -'0';
            
-           bitResult[0] =(char)((aa+bb+carrycarry)%2+'0');  
+           bitResult[0] =(char)((aa+bb+carrycarry)%2+'0');  // always remember the casting
            bitResult[1] =(char)((aa+bb+carrycarry)/2+'0'); 
            
            return bitResult;

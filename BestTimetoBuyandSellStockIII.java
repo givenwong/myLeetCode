@@ -37,7 +37,6 @@ public class BestTimetoBuyandSellStockIII  {
         }
         
         int result = 0;
-        
         for(int i =0; i <= len;i++){
             result =(int)Math.max(result, profit[i]);
         }

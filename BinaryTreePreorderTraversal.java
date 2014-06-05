@@ -18,22 +18,17 @@ public class BinaryTreePreorderTraversal  {
             return result;
             
         stack.add(root);
-        
         while(stack.size() != 0){
-            
             TreeNode temp = stack.get(stack.size()-1);
             stack.remove(stack.size()-1);
             result.add(temp.val);
-            
+            // right goes first because there is only one stack
+            // if there are two stack, left goes first
             if(temp.right != null)
                stack.add(temp.right); 
-            
             if(temp.left != null)
                stack.add(temp.left);
-    
         }
-        
-        
         return result;
     }
 }

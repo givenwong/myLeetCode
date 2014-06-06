@@ -16,7 +16,7 @@ public class ContainerWithMostWater {
                 max = (max > area)? max:area;
                 front++;
             }else{
-                  area = (end - front)*height[end]; 
+                area = (end - front)*height[end]; 
                 max = (max > area)? max:area;
                 end--;
             }

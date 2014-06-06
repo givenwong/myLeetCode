@@ -1,5 +1,5 @@
 public class ImageRotation {
- 
+// the matrix is square matrix 
  public void rotate(int[][] matrix) {
    
     if(matrix == null)
@@ -17,5 +17,5 @@ public class ImageRotation {
 			matrix[j][n-1-i] = temp;
 		}
 	}
-}
+ }
 }

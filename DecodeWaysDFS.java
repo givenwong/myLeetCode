@@ -7,7 +7,9 @@ public class DecodeWaysDFS {
         return num;
     }
     
+    // dfs is to check if the remaining string could be decoded 
     public void dfs(String s){
+    	// the whole string is checked so num++
         if (s.length()==0) num++;
         for(int i=0;i<=1&&i<s.length();i++){
             if (isValid(s.substring(0,i+1)))

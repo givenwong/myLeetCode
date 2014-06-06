@@ -1,24 +1,6 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; next = null; }
- * }
- */
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class ConvertSortedListtoBinarySearchTree {
-   
         
-        static ListNode h;
+  ListNode h;
  
 	public TreeNode sortedListToBST(ListNode head) {
 		if (head == null)
@@ -29,7 +11,7 @@ public class ConvertSortedListtoBinarySearchTree {
 		return sortedListToBST(0, len - 1);
 	}
  
-	// get list length
+	// get list length: shouldn't use this in the recursive function
 	public int getLength(ListNode head) {
 		int len = 0;
 		ListNode p = head;
@@ -42,6 +24,7 @@ public class ConvertSortedListtoBinarySearchTree {
 	}
  
 	// build tree bottom-up
+	// move h to the next node of the end node
 	public TreeNode sortedListToBST(int start, int end) {
 		if (start > end)
 			return null;

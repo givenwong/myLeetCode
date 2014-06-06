@@ -14,7 +14,8 @@ public class GasStation {
     if(temp <0)
     return -1;
     
-    
+    // can do this because of the uniqueness of the answer
+    // in the path each sum element should be non negative
     int seqSum =0;
     int startIndex =0;
     for(int i =0; i< gas.length;i++){
@@ -24,8 +25,6 @@ public class GasStation {
             seqSum =0;
         }
     }
-    
     return startIndex;
-  
     }
 }

@@ -6,11 +6,9 @@ public class WordSearch {
         
         for(int i =0; i< rowNum; i++)
         for(int j=0;j< colNum;j++){
-            
-            if(dfs(board,i,j,0,word))
+            if(dfs(board,i,j,0,word)) // dfs doesn't change the board
             return true;
         }
-    
         return false;
     }
     
@@ -28,12 +26,10 @@ public class WordSearch {
         return false;
         
         char temp = board[i][j];
-        board[i][j] = '@';
-    
+        board[i][j] = '@'; // this char cant be used more than twice
         boolean result = dfs(board, i+1,j,start+1,word)||dfs(board, i-1,j,start+1,word)||dfs(board, i,j-1,start+1,word)||dfs(board, i,j+1,start+1,word);
+        board[i][j] = temp; // make sure dfs doesn't change the board
         
-        board[i][j] = temp;
-        return result;
-        
+        return result;    
     }
 }

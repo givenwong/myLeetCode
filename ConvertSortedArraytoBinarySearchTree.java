@@ -9,11 +9,10 @@
  */
 public class ConvertSortedArraytoBinarySearchTree  {
     
-    static int n;
-    
+    int n;
     public TreeNode sortedArrayToBST(int[] num) {
         
-         n =0;
+        n =0;
         TreeNode result = sortedArrayToBST(num, 0, num.length-1); 
         return result;
    
@@ -30,7 +29,6 @@ public class ConvertSortedArraytoBinarySearchTree  {
 		TreeNode left = sortedArrayToBST(num,start, mid - 1);
 	    TreeNode root = new TreeNode(num[n]);
 		n++;
-	
 		TreeNode right = sortedArrayToBST(num,mid + 1, end);
  
 		root.left = left;

@@ -4,27 +4,18 @@
       int label;
       RandomListNode next, random;
       RandomListNode(int x) { this.label = x; }
- };
+ }
  
+// the easiest way is to construct a map: HashMap<RandomListNode, RandomListNode> with extra space cost  
+  
 public class CopyListwithRandomPointer  {
     public RandomListNode copyRandomList(RandomListNode head) {
      
      if(head == null)
      return null;
-     
-     if(head.next == null){
-         RandomListNode result = new RandomListNode(head.label);
-         result.next = null;
-         if(head.random != null)
-         result.random = result;
-         return result;
-     }
-     
-     
+  
      RandomListNode scanner = head;
-     
      while(scanner != null){
-         
          RandomListNode temp = new RandomListNode(scanner.label);
          temp.next = scanner.next;
          scanner.next = temp;
@@ -35,7 +26,6 @@ public class CopyListwithRandomPointer  {
         while(scanner != null){
          if(scanner.random != null)
          scanner.next.random = scanner.random.next;
-         
          scanner = scanner.next.next;
      }
      

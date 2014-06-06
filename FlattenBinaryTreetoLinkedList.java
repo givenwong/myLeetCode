@@ -1,25 +1,13 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class FlattenBinaryTreetoLinkedList {
+	// flat the binary tree into a linked list in pre order
     public void flatten(TreeNode root) {
-        
         root = flattenHelper(root);
-        
     }
     
     public TreeNode flattenHelper(TreeNode root) {
         
         if(root == null)
         return null;
-        
-        
         
         TreeNode left = flattenHelper(root.left);
         TreeNode right = flattenHelper(root.right);

@@ -1,8 +1,6 @@
 public class CountandSay {
     public String countAndSay(int n) {
-        
-        
-        
+      
         if(n == 1)
             return "1";
         String s = "11";    
@@ -10,9 +8,7 @@ public class CountandSay {
             return s;    
         
         int countOne  = n;
-        
         while(countOne >= 3 ){
-            
             int countTwo =1;
             StringBuffer buffer = new StringBuffer();
             
@@ -20,28 +16,17 @@ public class CountandSay {
                    if(s.charAt(i) == s.charAt(i-1)){
                      countTwo++;  
                    }else{
-                       
                        buffer.append(countTwo);
                        buffer.append(s.charAt(i-1));
                        countTwo = 1;
-                   }  
-                   
+                   }       
             }
-            
+            // process the last group of numbers in s of last round
             buffer.append(countTwo);
             buffer.append(s.charAt(s.length()-1));
             s = buffer.toString();
-            
             countOne--;
         }
-        
         return s;
-    }
-    public static void main(String[] args){
-    	
-    	CountandSay myCountandSay = new CountandSay();
-    	
-    	String myString = myCountandSay.countAndSay(60);
-    	System.out.println(myString);
     }
 }

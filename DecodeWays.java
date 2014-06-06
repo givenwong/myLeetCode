@@ -18,7 +18,7 @@ public class DecodeWays {
     
     public boolean isValid(String s){
         if (s.charAt(0)=='0') return false;
-        int code = Integer.parseInt(s);
+        int code = Integer.parseInt(s);// convert string to integer   
         return code>=1 && code<=26;
     }
 }

@@ -4,7 +4,6 @@ public class EvaluateReversePolishNotation{
     public int evalRPN(String[] tokens) {
         
         ArrayList<Integer> stack = new ArrayList<Integer>();
-        
         for(String current : tokens){
             
             int temp =0;

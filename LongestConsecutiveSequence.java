@@ -16,20 +16,15 @@ public class LongestConsecutiveSequence {
           while(mySet.contains(left)){
               mySet.remove(new Integer(left));
               left--;
-              count++;
-             
+              count++;  
           }
-          
           while(mySet.contains(right)){
               mySet.remove(new Integer(right));
               right++;
-              count++;
-              
+              count++;  
           }
-          
           max = (max > count)?max:count;
       }    
-     
      return max;
     }
 }

@@ -11,11 +11,11 @@ public class LargestRectangleinHistogramLinear {
         h = Arrays.copyOf(height, height.length + 1);  // the last element of h is zero
         
         while(i < h.length){
-            if(stack.isEmpty() || h[stack.peek()] <= h[i]){
+            if(stack.isEmpty() || h[stack.peek()] <= h[i]){ // push in the incremental sequence
                 stack.push(i++);
             }else {
                 int t = stack.pop();
-                maxArea = Math.max(maxArea, h[t] * (stack.isEmpty() ? i : i - stack.peek() - 1));
+                maxArea = Math.max(maxArea, h[t]*(stack.isEmpty() ? i : i - stack.peek() - 1));
             }
         }
         

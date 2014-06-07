@@ -3,6 +3,8 @@ public class DecodeWays {
     public int numDecodings(String s) {
         int n = s.length();
         if (n==0) return 0;
+        // dp[i] is the number of ways to decode substring(0,i)
+        // that is from start to the i th char
         int[] dp = new int[n+1];
         dp[0] = 1;
         if (isValid(s.substring(0,1))) dp[1] = 1;

@@ -4,9 +4,10 @@ public class LargestRectangleinHistogramSquare  {
        int maxV = 0;   
        for(int i =0; i< height.length; i++)  
        {  
-            if(i< height.length-1 && height[i] <= height[i+1]) // if not peak node, skip it  
+    	// if not peak node, skip it: the next try is higher and wider
+            if(i< height.length-1 && height[i] <= height[i+1]) 
                  continue;  
-                 
+            // minV is the minimum between i and j     
             int minV = height[i];   
             for(int j =i; j>=0; j--)   
             {   

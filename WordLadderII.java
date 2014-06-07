@@ -5,8 +5,7 @@ public class WordLadderII {
         ArrayList<ArrayList<String>> res = new ArrayList<ArrayList<String>>();
         if (start == null || end == null) return res;
         ArrayList<String> tmparray = new ArrayList<String>();
-        
-       
+        // this is not a dfs method
         if (start.equals(end)) {
         	tmparray.add(start);
         	tmparray.add(end);
@@ -14,14 +13,12 @@ public class WordLadderII {
         	return res;
         }
         
-     
         HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
         map.put(end, new ArrayList<String>());
         map.put(start, new ArrayList<String>());
         for (String s : dict) {
         	map.put(s, new ArrayList<String>());
         }
-        
         
         Queue<String> queue = new LinkedList<String>();
         queue.offer(start);
@@ -35,7 +32,6 @@ public class WordLadderII {
         		currentlevel.add(top);
         	}
         	
-        
         	for (String curs : currentlevel) {
         		for (int i = 0; i < curs.length(); ++i) {
         			for (char j = 'a'; j <= 'z'; ++j) {
@@ -61,7 +57,6 @@ public class WordLadderII {
         return res;
     }
 	
-	
 	public void buildpath(String start, String end, HashMap<String, ArrayList<String>> map, ArrayList<String> tmparray, ArrayList<ArrayList<String>> res) {
 		ArrayList<String> pre = map.get(end);
  		if (end.equals(start)) {
@@ -74,7 +69,6 @@ public class WordLadderII {
  			tmparray.add(s);
  			buildpath(start, s, map, tmparray, res);
  			tmparray.remove(tmparray.size() - 1);
- 		}
-			
+ 		}	
 	}
 }

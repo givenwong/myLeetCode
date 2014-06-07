@@ -29,16 +29,9 @@ public class MedianofTwoSortedArrays  {
                     a++;
                     c++;
                 }
-        
-        
-    
      if(mySumArray.length%2 == 1)
         return (double) mySumArray[(mySumArray.length -1)/2];
      else
-        return (double)(0.5*mySumArray[(mySumArray.length -1)/2] + 0.5*mySumArray[(mySumArray.length +1)/2]); 
-        
-        
-        
-        
+        return (double)(0.5*mySumArray[(mySumArray.length -1)/2] + 0.5*mySumArray[(mySumArray.length +1)/2]);     
     }
 }

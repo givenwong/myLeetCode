@@ -15,10 +15,7 @@ public class LinkedListCycle  {
               
               if(slow == fast)
                 return true;
-              
           }
-        
-        
         return false;
     }
 }

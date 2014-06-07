@@ -11,28 +11,19 @@ public class LongestSubstringWithoutRepeatingCharacters {
         
         
         while(end < s.length()){
-            
             if(myExistTab[s.charAt(end)]){
-                
                 while(s.charAt(front) != s.charAt(end)  ){
                 myExistTab[s.charAt(front)] = false;
                 front++;
                 }
-                front++;
-                
+                // start from 
+                front++; 
             } else{
                 myExistTab[s.charAt(end)] = true;
                 maxLength = (maxLength > end -front+1 )? maxLength: end-front +1;
             }
-        
-    
             end++;
         }
-        
-        
-        
         return maxLength;
-        
-        
     }
 }

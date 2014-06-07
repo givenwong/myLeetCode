@@ -1,14 +1,13 @@
 import java.util.*;
-
-
-
- 
 public class  MergeKSortedLists {
     public ListNode mergeKLists(ArrayList<ListNode> lists) {
-        
+        // the result to return
         ListNode result = null;
+        // the returned left part
         ListNode resultLeft = null;
+        // the returned right part
         ListNode resultRight = null;
+        // the left and right parts of the original list
         ArrayList<ListNode> left = new ArrayList<ListNode>() ;
         ArrayList<ListNode> right = new ArrayList<ListNode>();
         
@@ -48,9 +47,6 @@ public class  MergeKSortedLists {
              }
          
            current = result;
-         
-           
-  
          }
          
          while(resultLeft != null && resultRight != null){
@@ -81,16 +77,4 @@ public class  MergeKSortedLists {
          return result;
           
     }
-    
-  public static void main(String[] args){
-	  
-	  ArrayList<ListNode> myArrayList = new ArrayList<ListNode>();
-	  myArrayList.add(new ListNode(0));
-	  myArrayList.add(new ListNode(1));
-	  
-	  MergeKSortedLists myMergeKSortedLists = new MergeKSortedLists();
-	  ListNode myResult = myMergeKSortedLists.mergeKLists(myArrayList);
-	  System.out.println(myResult);
-	  
-  }
 }

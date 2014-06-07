@@ -4,14 +4,12 @@ public class LongestPalindromicSubstringDP {
         
         if(s == null || s.length() == 1)
             return s;
-        
-        // this time apply the dynamic programming
-        
+   
         boolean[][] dp = new boolean[s.length()][s.length()];
         int front=0;
         int end=0;
         int max = 1;
-        
+ 
         //base case I: start from length == 1
         for (int i = 0 ; i <= s.length()-1; i++){
             dp[i][i] = true;
@@ -19,7 +17,6 @@ public class LongestPalindromicSubstringDP {
             front = i;
             end = i;
         }
-        
         //base case II: start from length == 2
          for (int i = 0 ; i <= s.length()-2; i++){
             if(s.charAt(i) == s.charAt(i+1)){
@@ -33,6 +30,7 @@ public class LongestPalindromicSubstringDP {
         }
         
         if(s.length()>= 3){
+        // gap increases	
         for (int gap  = 2; gap <= s.length()-1; gap++){
             for (int i = 0; i <= s.length() -1 - gap; i++){
                 if(s.charAt(i) == s.charAt(i+gap) && dp[i+1][i+gap-1] == true){
@@ -45,9 +43,7 @@ public class LongestPalindromicSubstringDP {
                 }
             }
         }
-        }
-        
-        return s.substring(front, end+1);
-        
+    }
+        return s.substring(front, end+1);   
     }
 }

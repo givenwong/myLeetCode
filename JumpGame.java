@@ -1,7 +1,6 @@
 public class JumpGame {
     public boolean canJump(int[] A) {
         
-        
         if(A.length ==1)
         return true;
         
@@ -14,8 +13,7 @@ public class JumpGame {
             if(range >= A.length-1)
                 return true;
                 
-                int tempRange = range;
-                
+            int tempRange = range;    
             for(int next = anchorPoint +1; next<= range && next < A.length-1; next++){
                   if(A[next]+next > tempRange){
                       tempRange = A[next]+next;
@@ -23,12 +21,11 @@ public class JumpGame {
                   }
             }    
                 
-                   if(range>= tempRange)
-                   break;
+           if(range>= tempRange)
+           break;
                    
-                   range = tempRange;
-        }
-        
+           range = tempRange;
+        }  
         return false;
     }
 }

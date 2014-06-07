@@ -11,6 +11,7 @@ public class ContainerWithMostWater {
         while(front < end){
             
             int area;
+            // height[front] is the sucker
             if(height[front] <= height[end]){
                 area = (end - front)*height[front]; 
                 max = (max > area)? max:area;

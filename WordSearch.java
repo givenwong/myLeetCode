@@ -1,6 +1,6 @@
 public class WordSearch {
     public boolean exist(char[][] board, String word) {
-        
+   
         int rowNum = board.length;
         int colNum = board[0].length;
         

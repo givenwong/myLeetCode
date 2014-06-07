@@ -1,12 +1,3 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class ConvertSortedArraytoBinarySearchTree  {
     
     int n;
@@ -28,7 +19,8 @@ public class ConvertSortedArraytoBinarySearchTree  {
  
 		TreeNode left = sortedArrayToBST(num,start, mid - 1);
 	    TreeNode root = new TreeNode(num[n]);
-		n++;
+	    // each sortedArrayToBST function moves the pointer to the next one after its range
+	    n++; 
 		TreeNode right = sortedArrayToBST(num,mid + 1, end);
  
 		root.left = left;

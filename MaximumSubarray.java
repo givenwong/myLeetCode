@@ -6,19 +6,15 @@ public class MaximumSubarray  {
         int temp =0;
         
         while(scanner < A.length){
-             
              temp += A[scanner];
              max = (max > temp)?max:temp; 
-              
-            if(temp >=0){
-                scanner++;
-            }else{
+            if(temp >=0)
+            scanner++;
+            else{
                 scanner++;
                 temp =0;
             }
-            
         }
-        
         return max;
     }
 }

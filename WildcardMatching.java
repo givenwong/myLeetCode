@@ -1,8 +1,5 @@
-
 public class WildcardMatching{
-	
-	
-	public boolean isMatch(String s, String p) {
+		public boolean isMatch(String s, String p) {
        
         int star = -1; // position of last * in p
         int ss =0;     // position of last *'s opponent in s

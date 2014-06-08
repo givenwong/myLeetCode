@@ -6,11 +6,9 @@ public class ValidNumberRegEx  {
         } 
         
         String regex = "[-+]?(\\d+\\.?\\d*|\\.\\d+)(e[-+]?\\d+)?";  
-        if(s.trim().matches(regex)){  
+        if(s.trim().matches(regex)) 
             return true;  
-        }else{  
+        else  
             return false;  
-        }  
-        
     }
 }

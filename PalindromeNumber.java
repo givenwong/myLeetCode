@@ -47,11 +47,4 @@ public class PalindromeNumber {
         return true;
         
     }
-    
-    public static void main(String[] args){
-    	
-    	boolean myResult = new PalindromeNumber().isPalindrome(-2147483648);
-    	System.out.println(myResult);
-    	System.out.println("a\rb");
-    }
 }

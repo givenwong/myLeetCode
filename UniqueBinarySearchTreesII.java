@@ -1,27 +1,12 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; left = null; right = null; }
- * }
- */
-
 import java.util.*;
-
 public class UniqueBinarySearchTreesII  {
     public List<TreeNode> generateTrees(int n) {
         List<TreeNode> result = numTreesHelper(1,n);
-        return result;
-        
+        return result;   
     }
     
-    
-        public List<TreeNode> numTreesHelper(int start, int end){
-        
+    public List<TreeNode> numTreesHelper(int start, int end){
         List<TreeNode> result = new ArrayList<TreeNode>();
-        
         if(start > end){
         result.add(null);
         return result;
@@ -39,12 +24,6 @@ public class UniqueBinarySearchTreesII  {
                 }
             }
         }
-        
- 
-        
- 
-        
         return result;
-        
     }
 }

@@ -80,11 +80,4 @@ public class ValidNumberIteration {
         
         return hasNum;
     }
-    
-    public static void main(String[] args){
-    	ValidNumberIteration  myValidNumberIteration = new ValidNumberIteration();
-    	boolean myResult = myValidNumberIteration.isNumber("2e10");
-    	System.out.println(myResult);
-    	
-    }
 }

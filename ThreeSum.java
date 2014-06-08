@@ -1,14 +1,9 @@
-
 import java.util.*;
-
-
 public class ThreeSum {
     public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
         
        if(num==null)
         return null;
-       
-       
        
        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
        if(num.length ==0 )
@@ -19,22 +14,16 @@ public class ThreeSum {
        
        
        for(int i = 0; i <= num.length-3; i++){ // i is the index of the first numble in the tuplet
-           
           if(i==0 || num[i] != num[i-1]){   // this condition is to avoid dups: num[i] is its first appearance!
-          
           int target = -1*num[i];
           int front = i+1;
           int end = num.length-1;
-          
-          while(front < end){
-             
+          while(front < end){ 
              if(num[front] + num[end] == target){
-                 
                  ArrayList<Integer> temp = new ArrayList<Integer>();
-                 
                  temp.add(num[i]);
-                  temp.add(num[front]);
-                   temp.add(num[end]);
+                 temp.add(num[front]);
+                 temp.add(num[end]);
                  result.add(temp);
                  
                    front++;
@@ -50,18 +39,10 @@ public class ThreeSum {
              }else{
                  front++;
              }
-             
           }
-          
-    
-          }
-            
+        }      
     }
     
-    return result;
-       
-        
-        
-        
+    return result; 
     }
 }

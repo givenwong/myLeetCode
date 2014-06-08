@@ -2,7 +2,10 @@ public class TrappingRainWater  {
     public int trap(int[] A) {
         
         
-//An O(n) solution is to consider each bar at a time, we can see that, for each bar, the water itself can trap depends on the max      //height on its left and right, e.g.  if current bar is of height 2, the max height on its left is 4, max height on its right is 3,   //then water can be trapped in this bar is min(4,3)-2 = 1.
+/*For each bar, the water itself can trap depends on the max  height on its left and right, 
+ *e.g.  if current bar is of height 2, the max height on its left is 4, max height on its 
+ *right is 3, then water can be trapped in this bar is min(4,3)-2 = 1.
+ */
 
 
         if (A.length<2){return 0;}    

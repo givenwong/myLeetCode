@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class EvaluateReversePolishNotation{
     public int evalRPN(String[] tokens) {
         
@@ -34,14 +33,9 @@ public class EvaluateReversePolishNotation{
                 stack.remove(stack.size()-1);
                 stack.add(new Integer(temp));
                 continue;
-            }
-            
+            }  
             stack.add(new Integer(current));
-            
-        }
-        
+        }  
         return stack.get(0).intValue();
-    }
-    
-   
+    } 
 }

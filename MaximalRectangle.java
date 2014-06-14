@@ -7,7 +7,8 @@ public class MaximalRectangle  {
 		}
 		int cols = matrix[0].length;
 		
-        int[][] hOnes = new int[rows][cols];		// horizontal ones for the width
+		// hOnes[i][j]: the number of continuous ones ending at i,j in row i 
+        int[][] hOnes = new int[rows][cols];		
         
         int max = 0;
         for(int i=0; i<rows; i++){
@@ -22,6 +23,7 @@ public class MaximalRectangle  {
         	}
         }
         
+        // the max happens at the most right column
         for(int i=0; i<rows; i++){
         	for(int j=0; j<cols; j++){
         		if(hOnes[i][j] != 0){
@@ -36,7 +38,6 @@ public class MaximalRectangle  {
         		}
         	}
         }
-        
         return max;
     }
 }

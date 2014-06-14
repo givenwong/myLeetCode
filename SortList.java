@@ -1,26 +1,22 @@
-
 public class SortList {
     
     public ListNode sortList(ListNode head) {
-        
+     
         head = mergeSort(head);
-        return head;
-        
+        return head;       
     }
     
-    
-    
-    
+    // a recursion
     ListNode mergeSort(ListNode head){
         
-        // Any recursion must have the base case
+        // this is a corner case
         if(head == null)
             return null;
+        // this is a base case
         if(head.next == null)
             return head;
         
         // there are at least two nodes afterwards which means we have nonempty left and right lists
-        
         ListNode left = null;
         ListNode right = null;
         
@@ -31,21 +27,19 @@ public class SortList {
             
                slow = slow.next;
                fast = fast.next.next;
-            
         }
-            
+            // split the whole list into left half and right half
             right = slow.next;
             left = head;
             slow.next = null;
-            
-      
+              
         left = mergeSort(left);
         right = mergeSort(right);
         
-    
+        // why the first node is peculiar? because need to anchor the head to one of the left/right node 
+        // and this can't be done in a repetitive manner (in the while). It is one shot.
         ListNode current = null;
        
-    
               if(left.val < right.val){
                   head = left;
                   current = head;
@@ -56,11 +50,8 @@ public class SortList {
                    current = head;
                    right = right.next;
                    current.next = null;
-                  
               }
                  
-        
-        
         while(left != null && right != null){
             
                if(left.val < right.val){
@@ -72,13 +63,10 @@ public class SortList {
                    current.next = right;
                    right = right.next;
                    current = current.next;
-                   current.next = null;
-                  
+                   current.next = null;   
               }
-            
         }
-        
-        
+       
       if(left != null){
           current.next = left;
           return head;
@@ -88,12 +76,7 @@ public class SortList {
           current.next = right;
           return head;
       }
-     
-     
- 
+        // by logic this part is never reached as can not be left == null and right == null at the same time
         return head;
     }
-     
- 
-    
 }

@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class BinaryTreeInorderTraversal {
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
      
@@ -10,7 +9,6 @@ public class BinaryTreeInorderTraversal {
           
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode p = root;
- 
         while(!stack.empty() || p != null){
  
             if(p != null){
@@ -18,7 +16,8 @@ public class BinaryTreeInorderTraversal {
                 // process the left branch first
                 p = p.left; 
             }else{
-            	// when goes to the left end of the left branch, process the middle point, then begin process
+            	// when goes to the left end of the left branch, process the middle point, 
+            	//then begin processing
             	// the right branch (in the order of left middle right)
                 TreeNode t = stack.pop();
                 lst.add(t.val);
@@ -27,7 +26,5 @@ public class BinaryTreeInorderTraversal {
         }
  
         return lst;
-     
-        
     }
 }

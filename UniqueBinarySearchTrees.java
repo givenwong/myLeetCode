@@ -9,10 +9,10 @@ public class UniqueBinarySearchTrees {
         
         int totalNum =0;
         // try each number in this range as the root
-        for(int i = start+1; i<= end-1; i++){
+        for(int i = start+1; i<= end-1; i++)
             totalNum += numTreesHelper(start,i-1)*numTreesHelper(i+1,end);
-        }
-        // star or end as the root
+        
+        // start or end as the root and the left or the right subtree is null
         totalNum += numTreesHelper(start+1,end) + numTreesHelper(start,end-1);
         
         return totalNum;

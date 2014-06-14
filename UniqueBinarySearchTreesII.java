@@ -4,7 +4,7 @@ public class UniqueBinarySearchTreesII  {
         List<TreeNode> result = numTreesHelper(1,n);
         return result;   
     }
-    
+    // Helper returns a list of tree roots, each member of the list is a tree
     public List<TreeNode> numTreesHelper(int start, int end){
         List<TreeNode> result = new ArrayList<TreeNode>();
         if(start > end){

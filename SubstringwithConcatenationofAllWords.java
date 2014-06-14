@@ -1,7 +1,7 @@
 import java.util.*;
 
-
 public class SubstringwithConcatenationofAllWords {
+	
     public ArrayList<Integer> findSubstring(String S, String[] L) {
         
         if(L == null)
@@ -47,19 +47,7 @@ public class SubstringwithConcatenationofAllWords {
             
         }
         
-        
-        
         return result;
         
-        
     }
-    
-    public static void main(String[] args){
-    	
-    	SubstringwithConcatenationofAllWords mySubstringwithConcatenationofAllWords = new SubstringwithConcatenationofAllWords();
-    	String[] L = {"a","b"};
-    	ArrayList<Integer> myResult = mySubstringwithConcatenationofAllWords.findSubstring("aaa", L);
-    	System.out.println(myResult);
-    }
-    
 }

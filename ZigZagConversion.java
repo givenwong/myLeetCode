@@ -1,4 +1,5 @@
 public class ZigZagConversion {
+	
     public String convert(String s, int nRows) {
         
         if (s == null)
@@ -9,8 +10,9 @@ public class ZigZagConversion {
         
         if (nRows == 1)
         output = new StringBuffer(s);
-        else{ int j = 0;
-              int index = 0; 
+        else{ 
+        	  int j = 0; // the index for column
+              int index = 0; // the index in the string s
         
               while(index < s.length()){
               //south
@@ -27,14 +29,16 @@ public class ZigZagConversion {
                    index++;
                }         
                 }
+               
                 j++;
             }
         
         for(int i = 0; i<= nRows -1; i++)
             for(int t = 0; t <= input[i].length-1; t++)
                 if(input[i][t] != '\0') // '\0' is the char for space
-                output.append(input[i][t]); // string buffer use append method to expand
+                output.append(input[i][t]); // string buffer uses append() method to expand
         }
-     return output.toString();   
+        
+     return output.toString(); // string buffer 's toString() method   
     }
 }

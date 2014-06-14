@@ -3,37 +3,25 @@ public class PalindromeNumber {
         
         if(x==0)
         return true;
-        
-        
-        
-        boolean positive = true;
-        int numDigits = 1;
+      
+        int numDigits = 0;
         long xx = x;
         
-        if(xx<0){
-        	
-           return false; // based on the leetcode discussion !	
-           //xx = xx*(-1);
-           //positive = false;
-        }
-        
-        
-        while(xx >= Math.pow(10, numDigits-1)){
+        if(xx<0)
+        return false; 
+       
+        while(xx >= Math.pow(10, numDigits))
             numDigits++;
-        }
-        
-        numDigits--;
         
         if(numDigits == 1)
         return true;
         
         int index = numDigits;
-        
-        
-        while(index >=1)
-        {     
+        while(index >=1){
+        	  // to get the front number, each time get the number starting from the 2nd bit by subtracting the 1st bit off
               long front = xx -(xx/(long)Math.pow(10,index))*(long)Math.pow(10,index);
               front = front/(long)Math.pow(10,index-1);
+              // 
               long end = xx -(xx/(long)Math.pow(10,numDigits - index+ 1))*(long)Math.pow(10,numDigits - index +1);
               end = end/(long)Math.pow(10,numDigits -index);
               
@@ -41,10 +29,7 @@ public class PalindromeNumber {
               return false;
               
               index--;
-              
         }
-        
-        return true;
-        
+        return true;  
     }
 }

@@ -35,7 +35,6 @@ public class FourSum {
 	                }
 	            }    
 	        }
-	        
 	        if(result.size() == 0)
 	        return resultFinal;
 	        

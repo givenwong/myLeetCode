@@ -9,7 +9,7 @@ public class TwoSum {
 	            myHashMap.put(numbers[i],i);
 	            
 	        for(int i = 0; i< numbers.length; i++){
-	        	// can't use the num[i] twice
+	        	// can't use itself
 	            if (myHashMap.get(target - numbers[i]) != null && myHashMap.get(target - numbers[i]) != i)
 	            {   
 	                result[0] = i+1;

@@ -9,30 +9,34 @@ public class UniquePathsRecursion {
         return 1;
         
         if(m>=1&& n>=1)
-            dfs(m-1,n-1);
+            dfs(m,n); 
            
             return result;  
     }
     
     public void dfs(int mRemaining, int nRemaining){
-        if(mRemaining ==0 && nRemaining ==0){
+    	// the base case
+        if(mRemaining ==1 && nRemaining ==1){
             result++;
             return;
         }
-        if(mRemaining ==0 && nRemaining > 0){
-            dfs(0,nRemaining-1);
+        
+        // the following are the 3 non base cases
+        
+        if(mRemaining ==1 && nRemaining > 1){
+            dfs(1,nRemaining-1);
             return;
         }
-        if(nRemaining ==0 && mRemaining > 0){
-            dfs(mRemaining-1,0);
+        if(nRemaining ==1 && mRemaining > 1){
+            dfs(mRemaining-1,1);
             return;
         } 
       //try vertically
-       if(mRemaining >0 && nRemaining > 0){
+       if(mRemaining >1 && nRemaining > 1){
             dfs(mRemaining-1,nRemaining);
         }
       // try horizontally
-       if(mRemaining >0 && nRemaining > 0){
+       if(mRemaining >1 && nRemaining > 1){
             dfs(mRemaining,nRemaining-1);
         }
     }

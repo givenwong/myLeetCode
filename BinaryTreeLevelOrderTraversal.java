@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class BinaryTreeLevelOrderTraversal  {
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
         
@@ -50,12 +49,8 @@ public class BinaryTreeLevelOrderTraversal  {
              nextLevel = nextLevel+2;
              if((top.left != null && top.right == null)||(top.left == null && top.right != null) )    
              nextLevel = nextLevel+1;
-         
-            }         
-            
+            }           
         }
-        
-     return result;
-        
+     return result; 
     }
 }

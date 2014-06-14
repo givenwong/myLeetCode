@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class LargestRectangleinHistogramLinear {
     public int largestRectangleArea(int[] height) {
         
@@ -18,9 +17,6 @@ public class LargestRectangleinHistogramLinear {
                 maxArea = Math.max(maxArea, h[t]*(stack.isEmpty() ? i : i - stack.peek() - 1));
             }
         }
-        
-        
         return maxArea;
-        
     }
 }

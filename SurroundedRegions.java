@@ -1,8 +1,6 @@
 import java.util.*;
-
+//can't use dfs because of exceeding the maximum execution time
 public class SurroundedRegions  {
-    
-    private ArrayList<Integer> queue = new ArrayList<Integer>();
     
     public void solve(char[][] board) {
         
@@ -12,6 +10,7 @@ public class SurroundedRegions  {
         if (board[0].length == 0) {
             return;
         }
+        
         int row = board.length;
         int col = board[0].length;
 
@@ -42,7 +41,9 @@ public class SurroundedRegions  {
                 bfs(board, i, col - 1);
             }
         }
-
+        
+        // surrounded Os are replaced by Xs
+        // other Os are already labeled as P so convert them back to Os
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (board[i][j] == 'O') {
@@ -56,23 +57,25 @@ public class SurroundedRegions  {
         
     }
     
-    
+        // the bfs is not a recursion!
         private void bfs(char[][] board, int i, int j) {
         
         int row = board.length;
         int col = board[0].length;
+        // this is a queue for the grid; it converts 2 dimensional x, y into 1 dimensional
+        ArrayList<Integer> queue = new ArrayList<Integer>();
         
         queue.add(i * col + j);
         board[i][j] = 'P';
         
         while (!queue.isEmpty()) {
+        	
             int cur = queue.get(0);
             queue.remove(0);
             int x = cur / col;
             int y = cur % col;
-
-         
-            
+        
+        // try all of its neighbors     
         if (x-1 < 0 || x-1 >= row || y < 0 || y >= col || board[x-1][y] != 'O')
         ;
         else{
@@ -99,12 +102,10 @@ public class SurroundedRegions  {
         else{
         queue.add((x) * col + y+1);
         board[x][y+1] = 'P';
+        
         } 
             
-          
-        
-        }
-        
+      }
     }
     
     

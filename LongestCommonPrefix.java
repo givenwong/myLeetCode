@@ -1,10 +1,9 @@
 public class LongestCommonPrefix  {
     public String longestCommonPrefix(String[] strs) {
         
-        
         if(strs == null )
             return null;
-         if(strs.length == 0)
+        if(strs.length == 0)
             return "";    
         if(strs.length == 1)
             return strs[0]; 
@@ -26,6 +25,7 @@ public class LongestCommonPrefix  {
                 }   
             }
         }
+        // if reach here, the shortest is the longest common prefix and the result is never initialized 
         return shortest;
     }
 }

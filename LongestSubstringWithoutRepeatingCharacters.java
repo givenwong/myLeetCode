@@ -16,7 +16,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 myExistTab[s.charAt(front)] = false;
                 front++;
                 }
-                // start from 
+                // start from the next one, otherwise it repeats
                 front++; 
             } else{
                 myExistTab[s.charAt(end)] = true;

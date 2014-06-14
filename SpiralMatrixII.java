@@ -1,3 +1,4 @@
+// to put 1...n*n in the the matrix in the spiral order: from outer loop to the inner loop
 public class SpiralMatrixII {
     public int[][] generateMatrix(int n) {
         
@@ -5,22 +6,17 @@ public class SpiralMatrixII {
         helper(result, 1, 0, n-1, 0, n-1);
         return result;
     }
-    
-    
-    
+        
     public void helper(int[][] matrix, int startNum, int left, int right, int high, int low){
-        
-        
+           
         if(right < left || low < high){
             return;
         }
-        
-        
+         
         if(right == left && low == high){
             matrix[high][left] = startNum;
             return;
         }
-        
         
         if(left == right && high < low){
             for(int i = high; i <= low; i++){
@@ -35,11 +31,7 @@ public class SpiralMatrixII {
             }
             return;
         }
-        
-        
-        
         // corner cases above
-        
         for(int i = left; i<= right;i++){
             matrix[high][i]= startNum++;
         }

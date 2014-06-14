@@ -7,7 +7,6 @@ class TreeNode {
      TreeNode(int x) { val = x; }
  }
 
-
 public class BinaryTreePreorderTraversal  {
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
         

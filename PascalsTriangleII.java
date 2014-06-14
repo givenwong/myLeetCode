@@ -1,6 +1,4 @@
 import java.util.*;
-
-
 public class PascalsTriangleII {
     public ArrayList<Integer> getRow(int rowIndex) {
         
@@ -21,15 +19,13 @@ public class PascalsTriangleII {
         return firstRow;
         }
         
-         if(rowIndex ==2){
+        if(rowIndex ==2){
         return secondRow;
         }
         
         result.add(firstRow);     
         result.add(secondRow);
-        
        
-        
         while(rowIndex >=3 ){
         ArrayList<Integer> lastRow = result.get(result.size()-1);
         ArrayList<Integer> newRow = new ArrayList<Integer>();
@@ -43,12 +39,8 @@ public class PascalsTriangleII {
         
         if(rowIndex == 2)
         return newRow;
-        
         }
         
         return firstRow;
-     
-
-        
     }
 }

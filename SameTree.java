@@ -1,4 +1,5 @@
 public class SameTree {
+	// the dfs
     public boolean isSameTree(TreeNode p, TreeNode q) {
         
         if(p == null)

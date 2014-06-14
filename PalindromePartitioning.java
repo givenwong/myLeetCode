@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class PalindromePartitioning  {
     public ArrayList<ArrayList<String>> partition(String s) {
         
@@ -9,9 +8,7 @@ public class PalindromePartitioning  {
        dfs(s,0,temp,result);
        
        return result;
-        
     }
-    
     
     boolean isPalindrome(String s, int front, int end){
         if(front > end)
@@ -23,7 +20,6 @@ public class PalindromePartitioning  {
             front++;
             end--;
         }
-        
         return true;
     }
     
@@ -41,9 +37,6 @@ public class PalindromePartitioning  {
                  dfs(s,i+1,temp,result);
                  temp.remove(temp.size()-1);
              }
-         }
-        
+         }   
     }
-
-    
 }

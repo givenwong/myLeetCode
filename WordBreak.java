@@ -1,8 +1,13 @@
 import java.util.*;
+
 public class WordBreak {
-    public boolean wordBreak(String s, Set<String> dict) {
+
+	public boolean wordBreak(String s, Set<String> dict) {
         
+    	// HashSet object has a method: boolean myHashSet.contains();
+    	
         int length = s.length(); 
+        // dp[i]: if s.substring(0,i+1) can be "word broken"
         boolean[] dp = new boolean[length];
         
         for(int i =0; i<= length -1;i++){

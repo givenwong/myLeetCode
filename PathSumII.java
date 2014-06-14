@@ -1,13 +1,3 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
 import java.util.*;
 public class PathSumII  {
     public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
@@ -20,7 +10,7 @@ public class PathSumII  {
         
         if(root == null)
         return;
-        
+        // this is the base case
         if(root.left == null && root.right == null && root.val == sum){
             ArrayList<Integer> temptemp = new ArrayList<Integer>(temp);
             temptemp.add(root.val);
@@ -35,7 +25,6 @@ public class PathSumII  {
         if(root.right != null){
         dfs(root.right, sum-root.val, result,temp);
         }
-        temp.remove(temp.size()-1);
-        
+        temp.remove(temp.size()-1);   
     }
 }

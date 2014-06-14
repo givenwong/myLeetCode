@@ -1,4 +1,5 @@
 public class Searcha2DMatrix {
+	
     public boolean searchMatrix(int[][] matrix, int target) {
         
             if(matrix==null || matrix.length==0 || matrix[0].length==0) 
@@ -6,12 +7,15 @@ public class Searcha2DMatrix {
  
         int m = matrix.length;
         int n = matrix[0].length;
- 
+        
+        // convert 2 dimensional indices into 1 dimensional index
+        // the matrix it self is sorted so the 1 dimensional index should also follow this order
         int start = 0;
         int end = m*n-1;
  
         while(start<=end){
             int mid=(start+end)/2;
+            
             int midX=mid/n;
             int midY=mid%n;
  
@@ -26,7 +30,5 @@ public class Searcha2DMatrix {
         }
  
         return false;
-        
-        
     }
 }

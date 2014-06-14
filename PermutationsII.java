@@ -1,35 +1,26 @@
 import java.util.*;
-
 public class PermutationsII  {
-    
-    
+        
     public ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
         
         Arrays.sort(num);
         ArrayList<ArrayList<Integer>> myResult = new ArrayList<ArrayList<Integer>>();
     
-         ArrayList<Integer> temp1 = new ArrayList<Integer>();
+        ArrayList<Integer> temp1 = new ArrayList<Integer>();
         for(int i = 0; i<= num.length-1; i++)
           temp1.add(num[i]);
           
-         myResult.add(temp1);
+        myResult.add(temp1);
         
-        while(nextPermutation(num)){
-           
+        while(nextPermutation(num)){   
          ArrayList<Integer> temp = new ArrayList<Integer>();
-           for(int i = 0; i<= num.length-1; i++)
+         for(int i = 0; i<= num.length-1; i++)
           temp.add(num[i]);
           
             myResult.add(temp);
-       
-        }
-
-       
-        return myResult;
-        
-        
+        } 
+        return myResult;  
     }
-    
     
     public boolean nextPermutation(int[] num) {
         
@@ -37,24 +28,20 @@ public class PermutationsII  {
         int l = -1;
         int swap;
         
-        
         for(int i =0; i<= num.length-2;  i++){
             if(num[i]<num[i+1])
                 k = i;
         }
         
         if(k == -1){
-            
               return false;
         }
-          
             
         for(int i =k; i<= num.length-1;  i++){
             if(num[k]<num[i])
                 l = i;
         }    
         
-      
         swap = num[k];
         num[k] = num[l];
         num[l] = swap;
@@ -63,15 +50,7 @@ public class PermutationsII  {
             swap = num[front];
             num[front] = num[end];
             num[end] = swap;
-        }
-        
+        } 
         return true;
-    }
-    
-    
-   
-    
+    } 
 }
-        
-        
-    

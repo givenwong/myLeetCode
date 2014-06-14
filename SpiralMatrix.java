@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class SpiralMatrix  {
+	
     public ArrayList<Integer> spiralOrder(int[][] matrix) {
         
         ArrayList<Integer> result = new ArrayList<Integer>();
@@ -13,17 +14,16 @@ public class SpiralMatrix  {
         int high =0;
         int low = matrix.length-1;
         
-        helper(matrix, left,right , high, low, result);
+        helper(matrix, left, right , high, low, result);
         return result;
     }
     
     
     public void helper(int[][] matrix, int left, int right, int high, int low, ArrayList<Integer> result){
         
-        if(right < left || low < high){
+        if(right < left || low < high){ // this corner case is non trivial
             return;
         }
-        
         
         if(right == left && low == high){
             result.add(matrix[left][high]);
@@ -44,11 +44,7 @@ public class SpiralMatrix  {
             }
             return;
         }
-        
-        
-        
         // corner cases above
-        
         for(int i = left; i<= right;i++){
             result.add(matrix[high][i]);
         }
@@ -61,14 +57,11 @@ public class SpiralMatrix  {
             result.add(matrix[low][i]);
         }
        
-         for(int i = low-1; i > high;i--){
+         for(int i = low-1; i >= high+1;i--){
             result.add(matrix[i][left]);
         }
     
-       
        helper(matrix, left+1, right-1, high+1, low-1, result);
     }
-    
-
     
 }

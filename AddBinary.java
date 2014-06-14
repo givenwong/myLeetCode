@@ -51,6 +51,4 @@ public class AddBinary  {
            
            return bitResult;
     }
-    
-  
 }

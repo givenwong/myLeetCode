@@ -7,8 +7,6 @@ public class BestTimetoBuyandSellStockII  {
           if(prices[i+1] > prices[i])
               sum += prices[i+1] -prices[i];
       }
-      
-      return sum;
-         
+      return sum;       
     }
 }

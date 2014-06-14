@@ -1,5 +1,5 @@
 public class ValidNumberIteration {
-    
+   
     public boolean isNumber(String s) {
         
          if (s==null ){

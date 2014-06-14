@@ -1,13 +1,11 @@
-
-  
-  class RandomListNode {
+class RandomListNode {
       int label;
       RandomListNode next, random;
       RandomListNode(int x) { this.label = x; }
  }
  
 // the easiest way is to construct a map: HashMap<RandomListNode, RandomListNode> with extra space cost  
-  
+// the test cases ask for not changing the original list
 public class CopyListwithRandomPointer  {
     public RandomListNode copyRandomList(RandomListNode head) {
      
@@ -40,10 +38,8 @@ public class CopyListwithRandomPointer  {
          scannerOne = scannerOne.next;
          scannerTwo = scannerTwo.next;
      }
-     
      scannerOne.next = null;
      
      return fakeHead;
-       
     }
 }

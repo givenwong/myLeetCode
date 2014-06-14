@@ -1,31 +1,40 @@
 import java.util.*;
+
 public class ThreeSum {
-    public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
+
+	public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
         
        if(num==null)
         return null;
        
        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+       
        if(num.length ==0 )
         return result;
        
        // to use the two-pointer method, needs to sort the array first
+       // Arrays has method sort()
        Arrays.sort(num);
        
-       
-       for(int i = 0; i <= num.length-3; i++){ // i is the index of the first numble in the tuplet
+       for(int i = 0; i <= num.length-3; i++){// i is the index of the first number in the tuple
+    	   
           if(i==0 || num[i] != num[i-1]){   // this condition is to avoid dups: num[i] is its first appearance!
+          
           int target = -1*num[i];
           int front = i+1;
           int end = num.length-1;
+          
           while(front < end){ 
+        	  
              if(num[front] + num[end] == target){
+            	 
                  ArrayList<Integer> temp = new ArrayList<Integer>();
                  temp.add(num[i]);
                  temp.add(num[front]);
                  temp.add(num[end]);
                  result.add(temp);
                  
+                 // kick off the scanner to the next one
                    front++;
                    end--;
                    

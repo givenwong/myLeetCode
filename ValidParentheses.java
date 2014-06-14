@@ -5,6 +5,7 @@ public class ValidParentheses {
         
         StringBuffer stack = new StringBuffer();
         HashMap<Character, Character> map = new  HashMap<Character, Character>();
+        // only ) } ] need to be canceled out by popping out its opponent from the stack
         map.put(new Character(')'),new Character('('));
         map.put(new Character('}'),new Character('{'));
         map.put(new Character(']'),new Character('['));
@@ -16,15 +17,12 @@ public class ValidParentheses {
                 if( stack.length() ==0 ||map.get(new Character(tempChar))== null ||!map.get(new Character(tempChar)).equals(new Character(stack.charAt(stack.length()-1))))
                     stack.append(tempChar);
                 else
-                    stack.deleteCharAt(stack.length()-1);
-            
+                    // the top element of the stack is the opponent to the coming char
+                	// then pops it out to cancel the coming char
+                	stack.deleteCharAt(stack.length()-1);
         }
         
         return stack.length()==0;
-        
-        
-        
+      
     }
-    
-
 }

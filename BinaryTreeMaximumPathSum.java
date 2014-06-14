@@ -1,7 +1,6 @@
 public class BinaryTreeMaximumPathSum  {
   // this is NOT a class var but an instance var
 	int max; 
- 
 	public int maxPathSum(TreeNode root) {
 		// initialize max
 		max = (root == null) ? 0 : Integer.MIN_VALUE;

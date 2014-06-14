@@ -1,6 +1,4 @@
 import java.util.*;
-
-
 public class CombinationSum {
     public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
         
@@ -21,8 +19,7 @@ public class CombinationSum {
                result.add(new ArrayList<Integer>(temp));
                return;
            }
-           
-           
+      
            while(start <= candidates.length -1 && target - candidates[start] >= 0){
                temp.add(candidates[start]);
                // the same element can be used unlimited times

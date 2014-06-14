@@ -1,13 +1,9 @@
 public class TrappingRainWater  {
     public int trap(int[] A) {
-        
-        
 /*For each bar, the water itself can trap depends on the max  height on its left and right, 
  *e.g.  if current bar is of height 2, the max height on its left is 4, max height on its 
  *right is 3, then water can be trapped in this bar is min(4,3)-2 = 1.
  */
-
-
         if (A.length<2){return 0;}    
          
         int[] l = new int[A.length];
@@ -31,9 +27,6 @@ public class TrappingRainWater  {
             }
         }
          
-        return water;
-         
+        return water;    
     }
-        
-    
 }

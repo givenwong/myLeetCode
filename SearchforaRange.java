@@ -1,17 +1,18 @@
 public class SearchforaRange  {
+	// the way to return more than one values:
+	// 1 array
+	// 2 passing the reference of an object
     public int[] searchRange(int[] A, int target) {
         
         int[] result = new int[2];
         result[0] = searchBound(A, 0, A.length-1,true, target);
         result[1] = searchBound(A, 0, A.length-1, false, target);
-        
-        
+             
          return result;
     }
-    
-    
+  
+  // search Bound is a dfs  
   public int searchBound( int[] A, int front, int end, boolean isLeft, int target ){
-      
      
       int i = front;
       int j = end;
@@ -40,7 +41,8 @@ public class SearchforaRange  {
               i = mid+1;
           }
       }
-      }
+    }
       return -1;
   }    
+  
 }

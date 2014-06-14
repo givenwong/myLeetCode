@@ -1,6 +1,4 @@
-
 public class BestTimetoBuyandSellStockDPII {
-
 	 public int maxProfit(int[] prices) {
 	        
 	        int len = prices.length;

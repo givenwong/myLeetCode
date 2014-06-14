@@ -1,4 +1,5 @@
 public class UniquePathsII  {
+	
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         
          if(obstacleGrid == null)
@@ -12,6 +13,7 @@ public class UniquePathsII  {
         if(m<1 || n <1)
         return 0;
         
+        // two corner cases 
         if(m ==1){
             for(int i =0; i < n; i++){
                 if(obstacleGrid[0][i] == 1)
@@ -26,12 +28,15 @@ public class UniquePathsII  {
             }
             return 1;
         }
+        
+          // it is to initialize the top left corner 
            if(obstacleGrid[0][0] ==1){
             dpMatrix[0][0] =0;
             return 0;      
            }else
             dpMatrix[0][0] =1;
            
+           // this is for the case m>1 and n >1   it is to initialize the first row/col
            for(int i =1; i < m; i++){
                 if(obstacleGrid[i][0] == 1)
                     dpMatrix[i][0] =0;

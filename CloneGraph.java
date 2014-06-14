@@ -1,5 +1,4 @@
 import java.util.*;
-
 class UndirectedGraphNode {
       int label;
       List<UndirectedGraphNode> neighbors;
@@ -31,8 +30,7 @@ public class CloneGraph {
                      queue.add(a);
                      UndirectedGraphNode temp = new UndirectedGraphNode(a.label);
                      map.put(a,temp);
-                     map.get(current).neighbors.add(temp);
-                     
+                     map.get(current).neighbors.add(temp);         
                  }else{
                      map.get(current).neighbors.add(map.get(a));
                  }

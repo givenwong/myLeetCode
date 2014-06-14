@@ -19,7 +19,7 @@ public class PascalsTriangle  {
         return result;
         }
         
-         if(numRows ==2){
+        if(numRows ==2){
         result.add(firstRow);     
         result.add(secondRow);
         return result;
@@ -39,7 +39,6 @@ public class PascalsTriangle  {
          
         numRows--;
         }
-        
         return result;
     }
 }

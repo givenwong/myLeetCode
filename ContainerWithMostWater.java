@@ -7,9 +7,7 @@ public class ContainerWithMostWater {
         int front = 0;
         int end = height.length -1;
         int max = (end - front)*((height[front] <= height[end])?height[front]:height[end]); 
-        
         while(front < end){
-            
             int area;
             // height[front] is the sucker
             if(height[front] <= height[end]){
@@ -22,8 +20,6 @@ public class ContainerWithMostWater {
                 end--;
             }
         }
-        
-        return max;
-        
+        return max; 
     }
 }

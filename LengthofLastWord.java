@@ -3,6 +3,9 @@ public class LengthofLastWord  {
         
         StringBuffer buffer = new StringBuffer(s);
         buffer = buffer.reverse();
+        // trim() is for string
+        // split() is for string
+        // split() needs a char parameter and generates String[]
         String[] temp = buffer.toString().trim().split(" ");
         
         if(temp == null || temp.length ==0 )

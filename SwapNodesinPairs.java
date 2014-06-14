@@ -1,37 +1,30 @@
 public class SwapNodesinPairs {
+	
     public ListNode swapPairs(ListNode head) {
         
+    	 if(head == null)
+    		 return head;
+    	        
+    	 ListNode current = head;
+    	        
         int listSize = 0;
-        
-        if(head == null)
-        return head;
-        
-        ListNode current = head;
-       
-        
         while(current !=null){
             listSize++;
             current = current.next;
         }
-        
-        
-        if(listSize % 2 == 1 )
-            listSize--;
-        
-        
-        
+       
         ListNode front = head;
         ListNode end = head;
         ListNode swap = null;
         ListNode previous = head;
         
+        // to take the first operation as a special case is to assigning the head
+        
         if(listSize >=2){
-            
             
             front = head;
             end = head.next;
             
-          
             front.next = end.next;
             end.next = front;
             swap = end;
@@ -60,12 +53,7 @@ public class SwapNodesinPairs {
        
            listSize -=2;        
         }
-    
-    
-    
         
         return head;
-        
-        
     }
 }

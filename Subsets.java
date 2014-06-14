@@ -4,17 +4,18 @@ public class Subsets {
     
     public ArrayList<ArrayList<Integer>> subsets(int[] S) {
         
-  if (S == null)
-		return null;
+    	if (S == null)
+    		return null;
  
 	Arrays.sort(S);
  
 	ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
  
 	for (int i = 0; i < S.length; i++) {
+		// temp is for the new sets 
 		ArrayList<ArrayList<Integer>> temp = new ArrayList<ArrayList<Integer>>();
  
-		//get sets that are already in result
+		//get sets that are already in result generated from the previous round
 		for (ArrayList<Integer> a : result) {
 			temp.add(new ArrayList<Integer>(a));
 		}
@@ -28,7 +29,7 @@ public class Subsets {
 		ArrayList<Integer> single = new ArrayList<Integer>();
 		single.add(S[i]);
 		temp.add(single);
- 
+        // union two sets
 		result.addAll(temp);
 	}
  

@@ -22,7 +22,6 @@ public class ConstructBinaryTreefromPreorderandInorderTraversal {
                 break;
             }
         }
- 
         root.left = buildTree(preorder, preStart+1, preStart+k-inStart,inorder, inStart, k-1);
         root.right = buildTree(preorder, preStart+k-inStart+1, preEnd,inorder, k+1, inEnd );
         

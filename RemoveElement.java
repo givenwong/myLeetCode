@@ -1,8 +1,9 @@
 public class RemoveElement  {
+	
     public int removeElement(int[] A, int elem) {
         
-      int slow =0;
-      int fast =0;
+      int slow =0; // slow points to the next of the last valid number as no need to refer to the last valid number
+      int fast =0; // the probe
       
       if(A == null)
       System.exit(1);
@@ -18,13 +19,10 @@ public class RemoveElement  {
             slow++;
           }else{
               fast++;
-          }
-              
+          }          
       }
       
       return slow;
-        
-        
         
     }
 }

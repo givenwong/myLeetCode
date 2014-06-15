@@ -1,5 +1,5 @@
-
 public class RemoveDuplicatesfromSortedList  {
+	
     public ListNode deleteDuplicates(ListNode head) {
         
         if(head ==null)
@@ -26,10 +26,9 @@ public class RemoveDuplicatesfromSortedList  {
             }
             
         }
-        
+        // to isolate the result list from all the duplicates
         slow.next = null;
         
         return head;
-        
     }
 }

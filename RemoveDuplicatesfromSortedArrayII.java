@@ -1,4 +1,5 @@
 public class RemoveDuplicatesfromSortedArrayII  {
+	
     public int removeDuplicates(int[] A) {
         
         if(A == null )
@@ -7,19 +8,18 @@ public class RemoveDuplicatesfromSortedArrayII  {
         if(A.length ==0)
         return 0;
         
-        
         if(A.length ==1)
         return 1;
     
-        
         int slow =0;
         int fast =1;
+        // if duplicates are allowed more than twice, then need a counter: an integer variable here
         boolean reachMax = false;
         
         while(fast < A.length){
             
             if(A[slow] == A[fast] && reachMax){
-                fast++;
+               fast++;
                continue;
             }
             
@@ -40,5 +40,4 @@ public class RemoveDuplicatesfromSortedArrayII  {
         return slow+1;
     }
     
-
 }

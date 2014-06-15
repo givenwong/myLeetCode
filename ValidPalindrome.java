@@ -2,6 +2,7 @@ public class ValidPalindrome {
     public boolean isPalindrome(String s) {
         
     	// String has trim() and toCharArray() methods
+    	// String equals() is to judge if Strings are equal
         char[] myCharArray = s.trim().toCharArray();
     
       int front =0;

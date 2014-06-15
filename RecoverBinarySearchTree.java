@@ -6,6 +6,11 @@
  * */
 
 public class RecoverBinarySearchTree {
+	
+	// two ways to return more than one values:
+	// 1. array
+	// 2. use the fields in class definition and modify the fields
+	
     TreeNode p,q;
     TreeNode pre;
     
@@ -23,6 +28,7 @@ public class RecoverBinarySearchTree {
     	// scan the left part first
         getWrong(root.left);
         // pre != null is to prevent null pointer exception
+        // root is supposed to be greater than pre
         if (pre != null && root.val < pre.val) {
         if (p == null) {
         // first time to meet the disorder 	

@@ -19,11 +19,13 @@ public class TextJustification {
             int extraNum = 0;
             
             if(i-last-1>0){
-                spaceNum = (L-count)/(i-last-1); // every word has these except for the last one of each line
+            
+            	spaceNum = (L-count)/(i-last-1); // every word has these except for the last one of each line
                 extraNum = (L-count)%(i-last-1);
             }
-            
-            StringBuilder str = new StringBuilder();
+            // StringBuffer has methods: toString(), StringBuffer(String), deleteCharAt(index), append(), 
+            // setCharAt(index), length(), charAt(index)
+            StringBuffer str = new StringBuffer();
             for(int j=last;j<i;j++){ // words[last], words[last+1], ... words[i-1] is in this line
                                      // words[i] is in the next line
                 str.append(words[j]);
@@ -51,7 +53,7 @@ public class TextJustification {
     }
     // the last line: left justified
     // the way to judge if it comes the last line : if put in everything (and finish all words[]) and it is no longer than L
-    StringBuilder str = new StringBuilder();
+    StringBuffer str = new StringBuffer();
     for(int i=last;i<words.length;i++){
         str.append(words[i]);
         if(str.length()<L)

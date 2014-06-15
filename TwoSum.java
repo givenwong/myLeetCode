@@ -10,13 +10,14 @@ public class TwoSum {
 	            
 	        for(int i = 0; i< numbers.length; i++){
 	        	// can't use itself
-	            if (myHashMap.get(target - numbers[i]) != null && myHashMap.get(target - numbers[i]) != i)
-	            {   
-	                result[0] = i+1;
+	            if (myHashMap.get(target - numbers[i]) != null && myHashMap.get(target - numbers[i]) != i){   
+	                
+	            	result[0] = i+1;
 	                result[1] = myHashMap.get(target - numbers[i])+1;
 	                return result;  
 	            }
 	        }
+	        
 	        return null;
 	}
 }

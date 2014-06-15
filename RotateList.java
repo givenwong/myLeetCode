@@ -1,4 +1,5 @@
 public class RotateList {
+	
     public ListNode rotateRight(ListNode head, int n) {
         
         if(head == null)
@@ -29,9 +30,7 @@ public class RotateList {
         
         fast.next = head;
         head = slow.next;
-        
         slow.next = null;
-        
         
         return head;
     }

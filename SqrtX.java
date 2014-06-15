@@ -27,6 +27,7 @@ public class SqrtX  {
         }
         
         // why return low? want to return the largest number whose square is no greater than x
+        // OR by definition high gets assigned new value mid when mid*mid > x so high is always > x
         return (int)low;  
     }
 }

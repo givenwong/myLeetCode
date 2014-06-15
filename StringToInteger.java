@@ -36,6 +36,7 @@ public class StringToInteger {
               else if(result  > (double)(2147483647- myStringBuffer.charAt(i)+'0')/10 && !positive )
             	  return  -2147483648; 
               else
+            	  // this is the core to build from string to number
             	  result = result*10 + myStringBuffer.charAt(i)-'0';
         	  }else
             	  break; // the non numerical char is treated as a stop char

@@ -1,6 +1,8 @@
 import java.util.*;
 
+// to use a HashSet to dedup
 public class SubsetsII {
+	
     public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
         
         int[] S = num;
@@ -35,8 +37,9 @@ public class SubsetsII {
  
 	//add empty set
 	result.add(new ArrayList<Integer>());
-    
+    // Construct a set from a list
     HashSet<ArrayList<Integer>> resultSet = new HashSet<ArrayList<Integer>>(result);
+    // Construct a list from a set
     result = new ArrayList<ArrayList<Integer>>(resultSet);
     
 	return result;

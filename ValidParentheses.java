@@ -4,6 +4,7 @@ public class ValidParentheses {
     public boolean isValid(String s) {
         
         StringBuffer stack = new StringBuffer();
+        // HashMap has methods: put(key, value); get(key)
         HashMap<Character, Character> map = new  HashMap<Character, Character>();
         // only ) } ] need to be canceled out by popping out its opponent from the stack
         map.put(new Character(')'),new Character('('));

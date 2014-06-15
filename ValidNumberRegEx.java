@@ -1,7 +1,8 @@
 public class ValidNumberRegEx  {
+	
     public boolean isNumber(String s) {
        
-       // string's isEmpty() method
+       // String's isEmpty() method
        // see if string matches a regular expression String.matches(regular expression's string)	
        if(s.trim().isEmpty()){  
             return false;  

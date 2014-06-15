@@ -25,7 +25,8 @@ public class ThreeSumClosest {
             	  // update the best result so far
             	  // the i + front + end == target case is not included as just want to find the closest
                   if(diff > Math.abs(num[i] + num[front] + num[end] - target)){
-                   sum = num[i] + num[front] + num[end];
+                 
+                	  sum = num[i] + num[front] + num[end];
                    diff = Math.abs(num[i] + num[front] + num[end]- target);
                    }
                   

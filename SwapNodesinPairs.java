@@ -18,7 +18,8 @@ public class SwapNodesinPairs {
         ListNode swap = null;
         ListNode previous = head;
         
-        // to take the first operation as a special case is to assigning the head
+        // The reason to take the first operation as a special case 
+        // is to assigning the head
         
         if(listSize >=2){
             

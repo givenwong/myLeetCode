@@ -2,7 +2,7 @@ import java.util.*;
 
 public class CombinationSumII {
 	
-	public class Solution {
+
 		  
 		
 	    public ArrayList<ArrayList<Integer>> combinationSum2(int[] candidates, int target) {
@@ -45,5 +45,5 @@ public class CombinationSumII {
 	           }        
 	    }
 
-	}
+	
 }

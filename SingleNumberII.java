@@ -1,9 +1,14 @@
+/*Given an array of integers, every element appears three times except for one. 
+ * Find that single one*/
+
+
 // The basic bit operations:
 // 1. A[i]&(1<<j): to see if the j th bit (from back) is 1
 // 2. result |= (1<<i): result = result | (1<<i)
 public class SingleNumberII  {
     public int singleNumber(int[] A) {
-    
+       
+       // count each bit's frequency	
        int[] bitCount = new int[32];
        
         for(int j =0; j< 32; j++){

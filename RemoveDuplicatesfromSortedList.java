@@ -8,25 +8,26 @@ public class RemoveDuplicatesfromSortedList  {
         if(head.next ==null)
         return head;
         
-        ListNode slow = head;
+        ListNode slow = head; // the slow is the anchoring point
         ListNode fast = head.next;
         
         while(fast != null){
             
             if(slow.val != fast.val){
+            	
                 slow.next = fast;
                 slow = slow.next;
                 fast = fast.next;
+                
                 continue;
             }
             
-            if(slow.val == fast.val){
-             
+            if(slow.val == fast.val)
                 fast = fast.next;
-            }
             
         }
-        // to isolate the result list from all the duplicates
+        
+        // to detach the result list from the remaining part
         slow.next = null;
         
         return head;

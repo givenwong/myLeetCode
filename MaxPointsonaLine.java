@@ -3,16 +3,19 @@ import java.util.*;
 class Point{
     int x;
     int y;
+    
     Point(){
     x = 0; 
     y = 0; 
     }
+    
     Point(int a, int b){ 
   	  x = a; 
   	  y = b; 
   	  }
 }
   public class MaxPointsonaLine {
+	  
     public int maxPoints(Point[] points) {
         
         if(points == null)

@@ -1,6 +1,8 @@
 import java.util.*;
+
 public class BinaryTreeLevelOrderTraversal  {
-    public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
+
+	public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
         
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         ArrayList<TreeNode> myQueue = new ArrayList<TreeNode>();
@@ -12,7 +14,7 @@ public class BinaryTreeLevelOrderTraversal  {
         ArrayList<Integer> first = new ArrayList<Integer>();
         first.add(root.val);
         result.add(first);
-        // there is 1 or 2 level of nodes in the queue; can't be more than 2
+        // there is 1 or 2 levels of nodes in the queue; can't be more than 2
         int thisLevel = 1;
         int nextLevel = 0;
         
@@ -35,7 +37,9 @@ public class BinaryTreeLevelOrderTraversal  {
              thisLevel = nextLevel;
             
              nextLevel =0;
+             
              ArrayList<Integer> temp = new ArrayList<Integer>();
+             
              for(TreeNode a: myQueue){
              temp.add(a.val);
             }
@@ -51,6 +55,8 @@ public class BinaryTreeLevelOrderTraversal  {
              nextLevel = nextLevel+1;
             }           
         }
+        
      return result; 
-    }
+    
+	}
 }

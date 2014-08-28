@@ -1,5 +1,6 @@
 public class SqrtX  {
-    public int sqrt(int x) {
+
+	public int sqrt(int x) {
         
         if(x < 0)
         System.exit(1);
@@ -7,7 +8,9 @@ public class SqrtX  {
         if(x ==0)
         return 0;
         
-        if (x==1) {return 1;}
+        if (x==1) 
+        	return 1;
+        	
         
         long low = 0;
         long high = x;
@@ -20,7 +23,7 @@ public class SqrtX  {
         	
         	long mid = (high+low)/2; // this is integer divide if high - low <= 1 then may cause infinity loop
         	
-         if (mid*mid<=x)
+         if (mid*mid<=x) // mid*mid will overflow ?
         	 low = mid;
          else 
         	 high = mid;

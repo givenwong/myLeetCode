@@ -1,6 +1,6 @@
 public class PalindromePartitioningIIDFS {
     
-    int numCut =-1;
+    int numCut =-1; // the temp version of minimum number of cuts
     int minNumCut = Integer.MAX_VALUE;
     
     public int minCut(String s) {

@@ -11,31 +11,50 @@ public class RecoverBinarySearchTree {
 	// 1. array
 	// 2. use the fields in class definition and modify the fields
 	
-    TreeNode p,q;
+	
+	// these are the fields of the class
+    TreeNode p;
+    TreeNode q;
     TreeNode pre;
     
+   
+    
    public void recoverTree(TreeNode root) {
-    if (root == null) return;
-      getWrong(root);
-      int tmp = p.val;
+    
+	   if (root == null)
+    	return;
+      
+	  getWrong(root);
+      
+	  int tmp = p.val;
       p.val = q.val;
       q.val = tmp;
     }
     
+    // get wrong is virtually the inoder traversal 
     public void getWrong(TreeNode root) {
         // root is the node which is being visited
-    	if (root == null) return;
+    	if (root == null) 
+    		return;
     	// scan the left part first
+    	// get wrong 1 labels the wrong points
+    	//           2 move the pointer to the most recently visited point              
         getWrong(root.left);
+        
         // pre != null is to prevent null pointer exception
         // root is supposed to be greater than pre
+        
         if (pre != null && root.val < pre.val) {
+        
         if (p == null) {
-        // first time to meet the disorder 	
+        // first time to meet the disorder, the bigger one is the wrong one 	
         p = pre;
         q = root;
-         }else q = root; // the 2nd time to meet the disorder
+        }else 
+          q = root; // the 2nd time to meet the disorder, the smaller one is the wrong one
+        
         }
+        
         // for the right tree the previously visited is the root
         pre = root;
         getWrong(root.right);

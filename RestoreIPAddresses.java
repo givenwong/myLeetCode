@@ -7,7 +7,8 @@ public class RestoreIPAddresses {
     
         public ArrayList<String> restoreIpAddresses(String s) {
         ArrayList<String> res = new ArrayList<String>();
-        if (s.length()<4||s.length()>12) return res;
+        if (s.length()<4||s.length()>12) 
+        	return res;
         dfs(s,"",res,0);
         return res;
     }
@@ -30,7 +31,9 @@ public class RestoreIPAddresses {
     
     public boolean isValid(String s){
     	// if starts with a zero the whole String has to be a zero
-        if (s.charAt(0)=='0') return s.equals("0");
+        if (s.charAt(0)=='0') 
+        	return s.equals("0");
+        
         int num = Integer.parseInt(s);
         // the valid range is 0 to 255
         return num<=255 && num>0;

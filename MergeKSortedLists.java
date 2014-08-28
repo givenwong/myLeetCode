@@ -1,6 +1,8 @@
 import java.util.*;
+
 public class  MergeKSortedLists {
-    public ListNode mergeKLists(ArrayList<ListNode> lists) {
+
+	public ListNode mergeKLists(ArrayList<ListNode> lists) {
         // the result to return
         ListNode result = null;
         // the returned left part

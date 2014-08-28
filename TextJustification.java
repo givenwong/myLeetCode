@@ -40,7 +40,7 @@ public class TextJustification {
                     extraNum--;
                 }
             }
-            // this is for the last word (i-1) in each line in one case:
+            // this is for the last word (i-1) in each line in only one case:
             // there is only one word in each line and it can only be left justified and has to pad spaces to the right
             for(int j=str.length();j<L;j++)
             	str.append(" ");

@@ -1,18 +1,19 @@
 import java.util.*;
 // take k elements from 1,2,...n to get a combination
 public class Combinations  {
+	
     public ArrayList<ArrayList<Integer>> combine(int n, int k) {
         
     	ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> temp = new ArrayList<Integer>();
-        dfs(n,0,k,result, temp );
+        dfs(n,0,k,result,temp);
         return result;   
     }
     
     public void dfs(int n, int lastTime, int k, ArrayList<ArrayList<Integer>> result, ArrayList<Integer> temp ){
         // lastTime is for the range of selection
     	// n is also for the range of selection
-        // k is the remaining number of numbers
+        // k is the number of remaining numbers
         if(k==0){
           result.add(new ArrayList<Integer>(temp));
           return;

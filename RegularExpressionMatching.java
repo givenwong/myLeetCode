@@ -1,5 +1,5 @@
 // A recursion
-// the way to best make use of * is tentative: experiment on how many opponents it can replace one by one
+// the way to best make use of * is tentative: experiment on how many opponents it can replace.
 
 // Something about the String:
 // String is null case is different from String's length() == 0 case and   "" is the length() ==0 case
@@ -42,7 +42,7 @@ public class RegularExpressionMatching {
         
             // if flow comes there i = s.length(), the first two chars of p match the whole string of s
             // and to see if an empty string matches p.substring(2) 
-            // OR to see if p is exhausted 
+            // OR to see if p is exhausted/empty too 
             return isMatch(s.substring(i), p.substring(2)); 
             
             // Attention!!!!!!  s.substring(s.length()) == "" is an empty string ""

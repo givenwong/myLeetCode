@@ -1,9 +1,10 @@
 public class LongestSubstringWithoutRepeatingCharacters {
-    public int lengthOfLongestSubstring(String s) {
+
+	public int lengthOfLongestSubstring(String s) {
         
       boolean[] myExistTab = new boolean[256];
         for(int i = 0; i< 256; i++)
-            myExistTab[i] = false;
+            myExistTab[i] = false; // assume all are ASCII chars and initialize with false
             
         int front = 0;
         int end = 0;
@@ -11,19 +12,23 @@ public class LongestSubstringWithoutRepeatingCharacters {
         
         
         while(end < s.length()){
-            if(myExistTab[s.charAt(end)]){
-                while(s.charAt(front) != s.charAt(end)  ){
-                myExistTab[s.charAt(front)] = false;
-                front++;
+         
+        	if(myExistTab[s.charAt(end)]){
+            
+        		while(s.charAt(front) != s.charAt(end)  ){
+        			myExistTab[s.charAt(front)] = false;
+        			front++;
                 }
                 // start from the next one, otherwise it repeats
-                front++; 
+                	front++; 
             } else{
-                myExistTab[s.charAt(end)] = true;
-                maxLength = (maxLength > end -front+1 )? maxLength: end-front +1;
+            		myExistTab[s.charAt(end)] = true;
+            		maxLength = (maxLength > end -front+1 )? maxLength: end-front +1;
             }
+        	
             end++;
         }
+        
         return maxLength;
     }
 }

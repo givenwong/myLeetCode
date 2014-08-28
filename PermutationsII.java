@@ -1,4 +1,6 @@
 import java.util.*;
+
+/*num has the candidate numbers which may be duplicates*/
 public class PermutationsII  {
         
     public ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
@@ -6,6 +8,7 @@ public class PermutationsII  {
         Arrays.sort(num);
         ArrayList<ArrayList<Integer>> myResult = new ArrayList<ArrayList<Integer>>();
     
+        // temp1 is the first permutation
         ArrayList<Integer> temp1 = new ArrayList<Integer>();
         for(int i = 0; i<= num.length-1; i++)
           temp1.add(num[i]);
@@ -37,7 +40,7 @@ public class PermutationsII  {
               return false;
         }
             
-        for(int i =k; i<= num.length-1;  i++){
+        for(int i =k+1; i<= num.length-1;  i++){
             if(num[k]<num[i])
                 l = i;
         }    

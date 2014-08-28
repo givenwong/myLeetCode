@@ -1,3 +1,14 @@
+/*
+ * Given a sorted array of integers, find the starting and ending position of a given target value.
+
+Your algorithm's runtime complexity must be in the order of O(log n).
+
+If the target is not found in the array, return [-1, -1].
+
+For example,
+Given [5, 7, 7, 8, 8, 10] and target value 8,
+return [3, 4].
+*/
 public class SearchforaRange  {
 	// the way to return more than one values:
 	// 1 array
@@ -24,14 +35,18 @@ public class SearchforaRange  {
       if(A[mid] == target ){
           if(isLeft){
               if(mid == front || A[mid] > A[mid-1])
-                return mid;
+                return 
+                		mid;
               else 
-                return searchBound( A, front, mid-1, true, target );
+                return 
+                		searchBound( A, front, mid-1, true, target );
           }else{
                 if(mid == end || A[mid] < A[mid+1])
-                return mid;
+                return 
+                		mid;
               else 
-                return searchBound( A, mid+1, end, false, target );
+                return 
+                		searchBound( A, mid+1, end, false, target );
           }
           
       }else{

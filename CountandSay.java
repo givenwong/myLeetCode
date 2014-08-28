@@ -1,4 +1,5 @@
 public class CountandSay {
+	
     public String countAndSay(int n) {
       
         if(n == 1)

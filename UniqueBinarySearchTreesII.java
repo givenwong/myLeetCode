@@ -11,9 +11,9 @@ public class UniqueBinarySearchTreesII  {
     public List<TreeNode> numTreesHelper(int start, int end){
         
     	List<TreeNode> result = new ArrayList<TreeNode>();
-        
+        // this is the base case
     	if(start > end){
-        
+        // null is actually a subtree 
     	result.add(null);
         return result;
         }

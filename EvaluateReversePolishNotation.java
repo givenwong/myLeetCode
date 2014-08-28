@@ -34,6 +34,7 @@ public class EvaluateReversePolishNotation{
                 stack.add(new Integer(temp));
                 continue;
             }  
+            // if it is just a number
             stack.add(new Integer(current));
         }  
         return stack.get(0).intValue();

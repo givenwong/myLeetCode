@@ -1,4 +1,4 @@
-// this time A[] may have dups
+// this time the A[] may have dups
 public class SearchinRotatedSortedArrayII  {
 	
     public boolean search(int[] A, int target) {
@@ -28,7 +28,7 @@ public class SearchinRotatedSortedArrayII  {
                   end = m-1;   // search the unsorted part in next round
               
           }else{  
-        	  // this is the case A[front] == A[m], then has to move front backward till they aren't dups
+        	  // this is the case A[front] == A[m], then has to move front to the end till they aren't dups
               front++; // skip the dups
           }
              

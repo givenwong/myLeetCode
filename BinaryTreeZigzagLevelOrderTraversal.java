@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class BinaryTreeZigzagLevelOrderTraversal {
+	
 	  public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
 	        
 	        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
@@ -19,6 +20,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 	        boolean startFromLeft = true;
 	        
 	        while(myQueue.size()>0){
+	        	
 	            TreeNode top = myQueue.get(0);
 	            myQueue.remove(0);
 	             
@@ -28,6 +30,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 	            myQueue.add(top.right);
 	            
 	            if(thisLevel ==1){	
+	            	
 	             startFromLeft = (!startFromLeft);	
 	             if(top.left != null && top.right != null)    
 	             thisLevel = nextLevel+2;
@@ -35,7 +38,9 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 	             thisLevel = nextLevel+1;
 	             if(top.left == null && top.right == null)    
 	             thisLevel = nextLevel;
+	             
 	             nextLevel =0;
+	             
 	             ArrayList<Integer> temp = new ArrayList<Integer>();
 	             
 	            if(startFromLeft){ 

@@ -7,7 +7,8 @@ Step 3: Swap A[k] and A[l].
 Step 4: Reverse A[k+1] to the end.
 */
 public class NextPermutation {
-    public void nextPermutation(int[] num) {
+
+	public void nextPermutation(int[] num) {
         
         int k = -1;
         int l = -1;
@@ -26,8 +27,8 @@ public class NextPermutation {
         }
               return;
         }
-             
-        for(int i =k; i<= num.length-1;  i++){
+             // at least num[k+1] is greater than num[k] so at least l is k+1
+        for(int i =k+1; i<= num.length-1;  i++){
             if(num[k]<num[i])
                 l = i;
         }    

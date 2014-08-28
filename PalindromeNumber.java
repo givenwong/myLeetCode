@@ -1,4 +1,7 @@
+/*
+ * Must not use strings!*/
 public class PalindromeNumber {
+	
     public boolean isPalindrome(int x) {
         
         if(x==0)
@@ -17,6 +20,7 @@ public class PalindromeNumber {
         return true;
         
         int index = numDigits;
+        
         while(index >=1){
         	  // to get the front number, each time get the number starting from the 2nd bit by subtracting the 1st bit off
               long front = xx -(xx/(long)Math.pow(10,index))*(long)Math.pow(10,index);

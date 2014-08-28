@@ -1,3 +1,4 @@
+/*find ALL Palindromes*/
 import java.util.*;
 public class PalindromePartitioning  {
     public ArrayList<ArrayList<String>> partition(String s) {
@@ -26,7 +27,7 @@ public class PalindromePartitioning  {
     void dfs(String s, int start, ArrayList<String> temp, ArrayList<ArrayList<String>> result){
          
          if(start >= s.length()){
-             result.add(new ArrayList<String>(temp));
+             result.add(new ArrayList<String>(temp)); // temp is modified later so need a copy of temp rather than temp itself
              return;
          } 
          

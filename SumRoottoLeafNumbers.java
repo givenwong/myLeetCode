@@ -22,15 +22,16 @@ public class SumRoottoLeafNumbers  {
 	    }
 	    
 	    public void dfs(TreeNode root, ArrayList<ArrayList<Integer>> result, ArrayList<Integer> temp){
-	        
-	           if(root == null)
+	           // this is a base case. why, suppose it is from a node with only a left child and no right child
+	           // this is the "right child"
+	    	   if(root == null)
 	           return;
 	           
 	           if(root.left == null && root.right == null){
 	             temp.add(root.val); // assume dfs doesn't change temp here
 	             ArrayList<Integer> temptemp = new ArrayList<Integer>(temp);
 	             result.add(temptemp);  
-	             temp.remove(temp.size()-1); // assume dfs doesn't change temp here
+	             temp.remove(temp.size()-1); // assume dfs doesn't change temp here !!!!!!!!!
 	             return;    
 	           }
 	           

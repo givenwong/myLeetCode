@@ -66,7 +66,7 @@ public class SurroundedRegions  {
         ArrayList<Integer> queue = new ArrayList<Integer>();
         
         queue.add(i * col + j);
-        board[i][j] = 'P';
+        board[i][j] = 'P'; // this point is visited
         
         while (!queue.isEmpty()) {
         	
@@ -107,4 +107,6 @@ public class SurroundedRegions  {
             
       }
     }
+
+
 }

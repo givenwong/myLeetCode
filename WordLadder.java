@@ -1,3 +1,22 @@
+/*Given two words (start and end), and a dictionary, 
+ * find the length of shortest transformation sequence from start to end, such that:
+
+Only one letter can be changed at a time
+Each intermediate word must exist in the dictionary
+For example,
+
+Given:
+start = "hit"
+end = "cog"
+dict = ["hot","dot","dog","lot","log"]
+As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+return its length 5.
+
+Note:
+Return 0 if there is no such transformation sequence.
+All words have the same length.
+All words contain only lowercase alphabetic characters.*/
+
 import java.util.*;
 
 public class WordLadder {
@@ -23,7 +42,8 @@ public class WordLadder {
             if(currWord.equals(end))
                 return currDistance;
             
-            for(int i=0; i<currWord.length(); i++){ // String has method length()
+            for(int i=0; i<currWord.length(); i++){
+            	// String has method length()
                 char[] currCharArr = currWord.toCharArray(); // String has method toCharArray()
                 for(char c='a'; c<='z'; c++){
                 	if(currCharArr[i] != c){
@@ -33,13 +53,16 @@ public class WordLadder {
                         wordQueue.add(newWord);
                         distanceQueue.add(currDistance+1);
                         // can't reach the same node more than once
+                        // the next time newWord will have distance >= this time's newWord distance
+                        // because it is the level order traversal, the distance increases 
                         dict.remove(newWord);  
                     }
                 }
+              
               }
             }
         }
-        // there is no path
+        // there is no path, return 0 is necessary! because the target can't be reached
         return 0;
     }
 }

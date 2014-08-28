@@ -18,7 +18,7 @@ public class RemoveNthNodeFromEndofList  {
         ListNode end = head;
         ListNode temp = head;
         
-        while(n>1){
+        while(n>1) {
             end = end.next;
             n--;
         }

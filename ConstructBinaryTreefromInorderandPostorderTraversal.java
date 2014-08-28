@@ -1,6 +1,8 @@
 public class ConstructBinaryTreefromInorderandPostorderTraversal  {
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
-        int inStart = 0;
+
+	public TreeNode buildTree(int[] inorder, int[] postorder) {
+    
+		int inStart = 0;
         int inEnd = inorder.length-1;
         int postStart =0;
         int postEnd = postorder.length-1;
@@ -10,7 +12,8 @@ public class ConstructBinaryTreefromInorderandPostorderTraversal  {
  
     public TreeNode buildTree(int[] inorder, int inStart, int inEnd, 
                             int[] postorder, int postStart, int postEnd){
-        if(inStart > inEnd || postStart > postEnd)
+        
+    	if(inStart > inEnd || postStart > postEnd)
             return null;
  
         int rootValue = postorder[postEnd];

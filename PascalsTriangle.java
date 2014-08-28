@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class PascalsTriangle  {
+	
     public ArrayList<ArrayList<Integer>> generate(int numRows) {
         
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
@@ -31,14 +32,17 @@ public class PascalsTriangle  {
         while(numRows >=3 ){
         ArrayList<Integer> lastRow = result.get(result.size()-1);
         ArrayList<Integer> newRow = new ArrayList<Integer>();
+        // construct the new row
         newRow.add(1);
         for(int i =0; i<= lastRow.size()-2;i++)
             newRow.add(lastRow.get(i)+ lastRow.get(i+1));
         newRow.add(1);
+        
         result.add(newRow); 
          
         numRows--;
-        }
+       }
+       
         return result;
     }
 }

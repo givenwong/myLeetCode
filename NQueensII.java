@@ -20,6 +20,8 @@ public class NQueensII {
                 dfs(board,rowIndex+1,n);
     }
 }
+    
+    // checks if the position in row rowIndex conflicts with previous rows
   public boolean isValid(int[] board, int rowIndex){ 
       for(int i=0; i< rowIndex; i++){
           if(board[i] == board[rowIndex] || (int)Math.abs(board[i]-board[rowIndex]) == rowIndex -i)

@@ -9,7 +9,9 @@ public class SortList {
     // a recursion
     ListNode mergeSort(ListNode head){
         
-        // this is a corner case
+        // this is a base case
+    	// why two base cases? if the size of the list is 1, then the recursions will be one with 0-size list and 
+    	// the other with 1-size list
         if(head == null)
             return null;
         // this is a base case
@@ -22,7 +24,7 @@ public class SortList {
         
         ListNode slow = head;
         ListNode fast = head.next;
-          
+        // why fast != null and fast.next != null, ie test twice? because fast moves 2X speed  
         while(fast != null && fast.next != null){
             
                slow = slow.next;
@@ -79,4 +81,6 @@ public class SortList {
         // by logic this part is never reached as can not be left == null and right == null at the same time
         return head;
     }
+    
+   
 }

@@ -7,6 +7,7 @@ public class LinkedListCycle  {
           ListNode fast = head;
           ListNode slow = head;
           
+          // fast moves 2 steps each time so need to check if fast is null and if fast.next is null
           while(fast != null && fast.next != null ){
               slow = slow.next;
               fast = fast.next.next;

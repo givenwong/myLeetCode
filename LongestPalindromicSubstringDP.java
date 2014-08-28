@@ -1,6 +1,6 @@
-
 public class LongestPalindromicSubstringDP {
-    public String longestPalindrome(String s) {
+
+	public String longestPalindrome(String s) {
         
         if(s == null || s.length() == 1)
             return s;
@@ -34,7 +34,8 @@ public class LongestPalindromicSubstringDP {
         for (int gap  = 2; gap <= s.length()-1; gap++){
             for (int i = 0; i <= s.length() -1 - gap; i++){
                 if(s.charAt(i) == s.charAt(i+gap) && dp[i+1][i+gap-1] == true){
-                    dp[i][i+gap] = true;
+                    // from dp[i+1][i+gap-1] to dp[i][i+gap]
+                	dp[i][i+gap] = true;
                     if(max < gap+1){
                     max = gap +1;
                     front = i;

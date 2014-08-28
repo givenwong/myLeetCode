@@ -16,10 +16,8 @@ public class RemoveDuplicatesfromSortedArray {
            if(A[slow] != A[fast]){
                slow++;
                A[slow] = A[fast];
-               fast++;
-           }else{
-               fast++;
            }
+           fast++;
             
         }
         // to return the length of the array

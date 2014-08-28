@@ -1,3 +1,10 @@
+/*
+ * Given a collection of intervals, merge all overlapping intervals.
+
+For example,
+Given [1,3],[2,6],[8,10],[15,18],
+return [1,6],[8,10],[15,18].
+*/
 import java.util.*;
   
   class Interval {
@@ -12,7 +19,8 @@ public class MergeIntervals {
         
         if (intervals == null || intervals.size() <= 1)
 			return intervals;
-			
+		// remember the way to sort the elements in a collection
+        // the method and the comparator!!!!!!!
 	    Collections.sort(intervals, new IntervalComparator());
      	ArrayList<Interval> result = new ArrayList<Interval>();
         Interval prev = intervals.get(0);
@@ -33,6 +41,7 @@ public class MergeIntervals {
        return result;
     }
     
+    // implement the Comparator interface for the Collections.sort!!!!
     class IntervalComparator implements Comparator<Interval> {
 	public int compare(Interval i1, Interval i2) {
 		return i1.start - i2.start;

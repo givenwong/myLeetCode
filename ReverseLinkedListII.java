@@ -1,14 +1,15 @@
 // Two ways to reverse a list
 // 1. recursion
 // 2. iterations: split list into two parts: reversed part and the remaining part and use a probe to process (add the node
-// 	  to the front of the already part) and probe moves to the following node in the list... so on so forth
+// 	  to the FRONT of the already part) and probe moves to the following node in the list... so on so forth
 
 
 public class ReverseLinkedListII {
 	
    public ListNode reverseBetween(ListNode head, int m, int n) {
         
-        if(head==null || head.next == null) return head;
+        if(head==null || head.next == null) 
+        	return head;
         
         ListNode prev = new ListNode(0);
         prev.next=head;

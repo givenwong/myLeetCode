@@ -14,7 +14,8 @@ public class SearchinRotatedSortedArray  {
           
           // first half is sorted
           if(A[front] <= A[m]){
-           
+              // has to discuss two cases  A[front] <= A[m] V.S. A[front] > A[m]
+        	  // otherwise the "if(A[front] <= target && target < A[m])" is nonsense
               if(A[front] <= target && target < A[m])
                   end = m-1;  // search the sorted part in next round
               else

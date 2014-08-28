@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Triangle {
+	
     public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
          
           if(triangle == null)
@@ -19,6 +20,7 @@ public class Triangle {
               // set the last element of each level
               triangle.get(i).set(i,triangle.get(i).get(i) + triangle.get(i-1).get(i-1) ); 
          } 
+         
           int min = Integer.MAX_VALUE;
           for(Integer temp: triangle.get(triangle.size()-1))
               min = (min<temp)?min:temp;

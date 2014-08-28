@@ -1,6 +1,9 @@
 public class MinimumDepthofBinaryTree  {
+	
     public int minDepth(TreeNode root) {
-        
+        // this is not a base case but a corner case
+    	// why not a base case?
+    	// there is no way to recurse on a null node 
         if(root == null)
         return 0;
         

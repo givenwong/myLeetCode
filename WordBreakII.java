@@ -45,7 +45,7 @@ public class WordBreakII {
                          if(temp == "")
                          temp =s.substring(i,end+1);
                          else
-                         temp = s.substring(i,end+1) + " " + temp;
+                         temp = s.substring(i,end+1) + " " + temp; // grows from back to front
                     
                          dfs(s,dict,i-1,temp,result);
                          // make sure dfs doesn't change the temp string

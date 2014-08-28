@@ -1,4 +1,5 @@
 public class MergeTwoSortedLists  {
+	
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         
         if(l1 == null)
@@ -33,17 +34,13 @@ public class MergeTwoSortedLists  {
             sum = sum.next;
         }
         
-           while(first != null){
+           if(first != null)
             sum.next =first;
-            sum = sum.next;
-            first = first.next;
-        }
-        
-           while(second != null){
+     
+           if(second != null)
             sum.next =second;
-            sum = sum.next;
-            second = second.next;
-        }
+       
+           
         return head;    
     }
 }

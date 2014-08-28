@@ -9,15 +9,15 @@ public class FourSum {
 	        
 	        if(num.length < 4)
 	        return resultFinal;
-	        // Set to avoid dups 
+	        // Set to avoid duplicates 
 	        HashSet<ArrayList<Integer>> result = new HashSet<ArrayList<Integer>>();
 	        // sort: 1 result is in ascending order 2 use the two scanner approach
 	        Arrays.sort(num);     
-	        for(int i=0; i<= num.length-4; i++){
-	            for(int j=i+1;j <= num.length-3;j++){
+	        for(int i=0; i<= num.length-4; i++){ // the first number
+	            for(int j=i+1;j <= num.length-3;j++){ // the 2nd number
 	                
-	                int front= j+1;
-	                int end = num.length-1;
+	                int front= j+1; // the 3rd number
+	                int end = num.length-1; // the 4th number
 	                while(front < end){
 	                    if(num[front]+num[end] == target - num[i] - num[j]){
 	                        ArrayList<Integer> temp = new ArrayList<Integer>();

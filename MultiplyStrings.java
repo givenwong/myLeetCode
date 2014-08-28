@@ -1,4 +1,5 @@
 public class MultiplyStrings{
+	
     public String multiply(String num1, String num2) {
         
         StringBuffer result = new StringBuffer();
@@ -10,7 +11,7 @@ public class MultiplyStrings{
         
         for(int i =0; i < num2.length(); i++ )
          for(int j=0; j < num1.length(); j++)
-             temp[i+j] += (numOne.charAt(j)-'0')* (numTwo.charAt(i)-'0');
+             temp[i+j] += (numOne.charAt(j)-'0')*(numTwo.charAt(i)-'0');
              
         for(int i =0; i< temp.length; i++){
             result.append(temp[i]%10);

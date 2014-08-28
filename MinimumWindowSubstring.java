@@ -1,4 +1,5 @@
 public class MinimumWindowSubstring {
+	
     public String minWindow(String S, String T) {
         
         if (S == null || T == null || S.length() == 0 || T.length() == 0) {
@@ -9,13 +10,17 @@ public class MinimumWindowSubstring {
         int[] hasFound = new int[256];      // these two only contain chars in T
 
         for (int i = 0; i < T.length(); i++) 
-            needToFind[T.charAt(i)]++;
+            needToFind[(int)T.charAt(i)]++;
         
 
         int minWinLen = Integer.MAX_VALUE;
-        int count = 0, tLen = T.length();
-        int winBeg = 0, winEnd = 0;
+        int count = 0;  // number of valid chars found, eventually count should == tLen
+        int tLen = T.length();
+        int winBeg = 0;
+        int winEnd = 0;
         
+        // begin is to dedup
+        // end is the probe
         for (int begin = 0, end = 0; end < S.length(); end++) {
         	// if this is something not interesting, continue
             if (needToFind[S.charAt(end)] == 0) 
@@ -26,11 +31,13 @@ public class MinimumWindowSubstring {
                 count ++;  // count how many valid T chars are found 
             
             if(count == tLen){ // if all are found, then begin reducing
+            	
+            	// begin is to dedup
                 while(needToFind[S.charAt(begin)] == 0 || hasFound[S.charAt(begin)] > needToFind[S.charAt(begin)]){
                     if(hasFound[S.charAt(begin)] > needToFind[S.charAt(begin)]){
                         hasFound[S.charAt(begin)]--;
                     }
-                    begin ++;
+                    begin++;
                 }
                 
                 int winLen = end - begin + 1;
@@ -40,11 +47,14 @@ public class MinimumWindowSubstring {
                     minWinLen = winLen;
                 }
             } 
+            
+            
         }
 
         if (count == T.length()) {
             return S.substring(winBeg, winEnd + 1);
         }
+        
         return "";
     }
 }

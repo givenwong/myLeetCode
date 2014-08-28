@@ -13,7 +13,7 @@ import java.util.*;
  * 2    if the probe gets a number at its >= 2nd appearance:
  *      add this number to last round's prev to get a new prev which contains this number
  *      one more times than the old prev
- *      union result and prev to get result but keep a record of prev ("set of once") for potential use
+ *      union result and prev to get result but keep a record of prev ("set of twice") for potential use
  *      in the next round 
  *      
  * 3    After exhaust all numbers in the array add the empty set     

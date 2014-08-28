@@ -1,6 +1,8 @@
 import java.util.*;
+
 public class BinaryTreePostorderTraversal {
-    public ArrayList<Integer> postorderTraversal(TreeNode root) {
+
+	public ArrayList<Integer> postorderTraversal(TreeNode root) {
         
         ArrayList<Integer> result = new ArrayList<Integer>();
         ArrayList<TreeNode> stackOne = new ArrayList<TreeNode>();
